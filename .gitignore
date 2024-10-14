@@ -3,3 +3,6 @@
 
 # Ignorar diretórios de dependências
 .env/
+
+*.pyc
+__pycache__/
