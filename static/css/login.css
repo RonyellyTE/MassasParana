@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #D35400;
+    --secondary-color: #EF7F57;
+    --bg-color: rgba(255, 255, 255, 0.31);
+}
+
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.israel{
+    width: 200px;  /* Defina a largura da imagem */
+    height: 200px; /* Defina a altura igual à largura para manter a proporção circular */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover;
+    background-image: '../static/img/images.jpeg';
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    color: var(--primary-color);
+    flex: 1;
+}
+
+.logo-container img {
+    width: 100%; 
+    margin-bottom: 150px;
+    margin-right: 170px;
+    max-width: 400px; 
+}
+
+/* Login */
+.login-container {
+    background: linear-gradient(-180deg, var(--secondary-color), #894932);
+    display: grid;
+    align-items: center;
+    color: white;
+    display: flexbox;
+    padding: 40px;
+    border-radius: 15px;
+    height: 40rem;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    margin-left: 20px;
+    border: white solid 4px;
+}
+
+/* Títulos e Inputs */
+.login-container h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.input-icon {
+    position: absolute; /* Posiciona a imagem em relação ao contêiner */
+    top: 65%; /* Centraliza verticalmente */
+    right: 10px; /* Distância da borda direita do input */
+    transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+    width: 20px; /* Ajuste o tamanho da imagem, se necessário */
+    height: 20px; /* Ajuste a altura da imagem, se necessário */
+    pointer-events: none; /* Para que a imagem não interfira com a interação do input */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--bg-color);
+}
+
+/* Links */
+.forgot-password {
+    display: block;
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.login-btn {
+    background: linear-gradient(to right, #E53537, #F17E30, #F7A22C , #FDC728);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #ff8f00, #ffeb3b);
+}
+
+.create-account {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.create-account:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .login-container {
+        width: 90%;
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+    }
+
+    .forgot-password,
+    .create-account {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container h2 {
+        font-size: 18px;
+    }
+
+    .input-group input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .forgot-password,
+    .create-account {
+        font-size: 10px;
+    }
+}

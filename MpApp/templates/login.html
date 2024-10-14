@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Massas Paraná</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="{% static 'img/logo.png' %}" alt="Massas Paraná Logo">
+        </div>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+                    <img src="{% static 'img/icons/email.svg' %}" alt="" class="input-icon">
+                </div>                
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                    <img src="{% static 'img/icons/senha.svg' %}" alt="" class="input-icon">
+                </div>
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+            <a href="#" class="create-account">Não tenho uma conta. Crie agora!</a>
+        </div>
+    </div>
+</body>
+</html>
