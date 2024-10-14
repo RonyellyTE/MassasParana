@@ -7,6 +7,7 @@ def index(request):
     })
 
 def login(request):
+    print(request.POST)
     return render(request, 'login.html', context={
         
     })
