@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Criar Conta</title>
     {% laod static %}
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Painel esquerdo -->
+        <div class="left-panel">
+            <div class="logo">MP</div>
+            <h1>Cadastre-se para receber novidades e ofertas exclusivas. É rápido e fácil!</h1>
+        </div>
+
+        <!-- Painel direito -->
+        <div class="right-panel">
+            <h2>Criar Conta</h2>
+            <div class="google-btn">
+                <img src="google-icon.png" alt="Google Logo">
+                <span>Acessar com Google</span>
+            </div>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="name">Nome completo:</label>
+                    <input type="text" id="name" name="name" placeholder="Nome completo">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Senha">
+                </div>
+                <button type="submit" class="create-account-btn">Criar Conta</button>
+            </form>
+            <a href="#" class="already-have-account">Já tem uma conta? Acessar!</a>
+        </div>
+    </div>
 </body>
 </html>

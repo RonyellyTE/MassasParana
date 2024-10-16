@@ -1,5 +1,102 @@
-* {
+:root{
+    --primary-color: #894932;
+    --secondary-color: #E77B54;
+}
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background-image: url();
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(225, 255, 255, 0.8); /*fundo branco com transparência*/
+}
+.left-panel, .rigth-panel{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1)
+}
+.rigth-panel{
+    background-color: #e99745;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+.left-panel h1{
+    color: white;
+    font-size: 24px;
+}
+.logo{
+    font-size: 72px;
+    font-weight: bold;
+    color: #b42929;
+}
+.rigth-panel{
+    width: 300px;
+}
+.rigth-panel h2{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.input-group{
+    margin-bottom: 15px;
+}
+.input-group label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.input-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.create-account-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #f58634;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.google-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.google-btn{
+    width: 20px;
+    margin-right: 10px;
+}
+.already-have-account{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
 }
