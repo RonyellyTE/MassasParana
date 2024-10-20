@@ -3,6 +3,6 @@
 
 # Ignorar diretórios de dependências
 .env/
-
+*.sqlite3
 *.pyc
 __pycache__/

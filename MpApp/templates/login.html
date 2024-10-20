@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Massas Paraná</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/bnt_submit.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pages/login.css' %}">
 </head>
 <body>
     <div class="container">
@@ -14,23 +15,37 @@
         </div>
         <div class="login-container">
             <h2>Login</h2>
-            <form action="#" method="POST">
+            <!-- Renderiza o formulário Django -->
+            <form method="POST" action="{% url 'login' %}">
                 {% csrf_token %}
+                
+                <!-- Email Field -->
                 <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="Email">
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
                     <img src="{% static 'img/icons/email.svg' %}" alt="" class="input-icon">
-                </div>                
-                <div class="input-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" placeholder="Senha">
-                    <img src="{% static 'img/icons/senha.svg' %}" alt="" class="input-icon">
+                    {{ form.email.errors }}  <!-- Exibe os erros do campo email -->
                 </div>
-                <a href="#" class="forgot-password">Esqueci minha senha</a>
-                <button type="submit" class="login-btn">Entrar</button>
+                
+                <!-- Password Field -->
+                <div class="input-group">
+                    {{ form.senha.label_tag }}
+                    {{ form.senha }}
+                    <img src="{% static 'img/icons/senha.svg' %}" alt="" class="input-icon">
+                    {{ form.senha.errors }}  <!-- Exibe os erros do campo senha -->
+                </div>
+                
+                <!-- Esqueci minha senha -->
+                <a href="{% url 'password_reset' %}" class="forgot-password">Esqueci minha senha</a>
+                
+                <!-- Botão de Login -->
+                <button type="submit" class="submit-btn">Entrar</button>
             </form>
-            <a href="#" class="create-account">Não tenho uma conta. Crie agora!</a>
+            
+            <!-- Link de criação de conta -->
+            <a href="{% url 'register' %}" class="create-account">Não tenho uma conta. Crie agora!</a>
         </div>
     </div>
+    <script src="{% static 'js/bnt_submit.js'%}"></script>
 </body>
 </html>

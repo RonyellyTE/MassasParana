@@ -1,9 +1,10 @@
-# MpApp/urls.py
-
 from django.urls import path
-from . import views
+from .views import IndexView, LoginView, RegisterView, PasswordResetView, ProfileView
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('login/', views.login, name='login')
+    path('', IndexView.as_view(), name='index'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('register/', RegisterView.as_view(), name='register'),
+    path('password_reset/', PasswordResetView.as_view(), name='password_reset'),
+    path('profile/', ProfileView.as_view(), name='profile'),
 ]
