@@ -1,0 +1,243 @@
+@import url('../components/bnt_submit.css');
+
+
+:root {
+    --secondary-color: #EF7F57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/static/img/background.png') no-repeat center center/cover;
+    padding: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+
+
+/* Left Card */
+.left-card {
+    width: 51%;
+    height: 93%;
+    font-size:x-large;
+    background: linear-gradient(-180deg, var(--secondary-color), #894932);
+    border: white solid 4px;
+    padding: 60px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Adicionado para permitir que o z-index funcione */
+    z-index: 0; /* Certifique-se de que este é menor que o da right-card */
+    transform: translateX(10%); /* Mova a carta da esquerda para a esquerda */
+}
+
+.left-content {
+    text-align: center;
+    color: white;
+}
+
+.left-card .logo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.left-card p {
+    font-size: 1.2em;
+}
+
+/* Right Card */
+.right-card {
+    width: 50%;
+    background-color: white;
+    padding: 70px;
+    border-radius: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    right: 0;
+    z-index: 1;
+}
+
+.form-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.form-errors {
+    color: red;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.google-login {
+    width: 100%;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.google-login img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.or {
+    text-align: center;
+    margin: 10px 0;
+    color: #777;
+}
+
+/* Floating Label Style for Form Inputs */
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 16px;
+    color: #333;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.3s;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.3s;
+    font-size: 16px;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #ff5722;
+}
+
+.form__field:focus ~ .form__label {
+    font-size: 14px;
+    color: #ff5722;
+    top: 0;
+}
+
+.input-icon-wrapper {
+    position: relative; /* Necessário para posicionar a imagem */
+    width: 100%; /* Para garantir que ocupa o mesmo espaço que o input */
+}
+
+.form__field {
+    padding-right: 40px; /* Espaço para a imagem */
+}
+
+.input-icon {
+    position: absolute; /* Permite que você posicione a imagem dentro do input */
+    top: 75%; /* Centraliza verticalmente */
+    right: 10px; /* Posiciona a imagem à direita */
+    transform: translateY(-50%); /* Ajusta para o centro exato */
+    width: 20px; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+}
+
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #f25c3b;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Ajustes responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-card, .right-card {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 40px;
+        transform: translateX(0%); /* Mova a carta da esquerda para a esquerda */
+    }
+
+    .right-card {
+        transform: translateX(0);
+        position: static;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .left-card, .right-card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .form__field {
+        font-size: 12px;
+    }
+}

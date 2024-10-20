@@ -1,0 +1,51 @@
+
+
+.submit-btn {
+    background: linear-gradient(to right, #E53537, #F17E30, #F7A22C , #FDC728);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #ff8f00, #ffeb3b);
+    transform: scale(1.05); /* Cresce um pouco no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+}
+
+.submit-btn.loading {
+    background: linear-gradient(to right, #ff8f00, #ffeb3b); /* Cor de fundo durante o carregamento */
+    cursor: not-allowed; /* Indica que não pode clicar durante o envio */
+    color: transparent; /* Esconde o texto */
+}
+
+.submit-btn.loading::after {
+    content: '';
+    border: 3px solid white;
+    border-top: 3px solid transparent; /* Cria o efeito de loading */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite; /* Animação de rotação */
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

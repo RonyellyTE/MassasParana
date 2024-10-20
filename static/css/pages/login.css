@@ -1,0 +1,202 @@
+
+:root {
+    --primary-color: #D35400;
+    --secondary-color: #EF7F57;
+    --bg-color: rgba(255, 255, 255, 0.31);
+}
+
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/static/img/background.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    color: var(--primary-color);
+    flex: 1;
+}
+
+.logo-container img {
+    width: 100%; 
+    margin-bottom: 150px;
+    margin-right: 170px;
+    max-width: 400px; 
+}
+
+/* Login */
+.login-container {
+    background: linear-gradient(-180deg, var(--secondary-color), #894932);
+    display: grid;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    height: 40rem;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    margin-left: 20px;
+    border: white solid 4px;
+}
+
+/* Títulos e Inputs */
+.login-container h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Ajustes para os campos de formulário gerados pelo Django */
+.login-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--bg-color);
+}
+
+.input-icon {
+    position: absolute;
+    top: 65%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos para erros nos campos */
+input.is-invalid {
+    border: 2px solid red;
+}
+
+.form-error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+/* Links */
+.forgot-password {
+    display: block;
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.create-account {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.create-account:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .login-container {
+        width: 90%;
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+    }
+
+    .forgot-password,
+    .create-account {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container h2 {
+        font-size: 18px;
+    }
+
+    .input-group input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .forgot-password,
+    .create-account {
+        font-size: 10px;
+    }
+}
