@@ -1,125 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Criar Conta - MP</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/components/bnt_submit.css' %}">
-    <link rel="stylesheet" href="{% static 'css/pages/cadastro.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-
-    <style>
-        /* Inclua aqui o CSS atualizado acima */
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Left Section (Card with Logo) -->
-        <div class="left-card">
-            <div class="left-content">
-                <strong>Cadastre-se para receber novidades e ofertas exclusivas. <br>
-                    É rápido e fácil!</strong>
-                <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Criar Conta - MP</title>
+        {% load static %}
+        <link
+            rel="stylesheet"
+            href="{% static 'css/components/bnt_submit.css' %}"
+        />
+        <link rel="stylesheet" href="{% static 'css/pages/cadastro.css' %}" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Left Section (Card with Logo) -->
+            <div class="left-card">
+                <div class="left-content">
+                    <strong
+                        >Cadastre-se para receber novidades e ofertas
+                        exclusivas. <br />
+                        É rápido e fácil!</strong
+                    >
+                    <img
+                        src="{% static 'img/logo.png' %}"
+                        alt="Logo"
+                        class="logo"
+                    />
+                </div>
             </div>
-        </div>
-        
-        <!-- Right Section (Form Card with Overlap) -->
-        <div class="right-card">
-            <div class="form-container">
-                <h2>Criar Conta</h2>
-                <button class="google-login">
-                    <img src="{% static 'img/icons/icons8-google-logo.svg' %}" alt="Google Icon">
-                    Acessar com Google
-                </button>
-                <p class="or">ou</p>
-                
-                <!-- Formulário Django -->
-                <form method="POST">
-                    {% csrf_token %}
-                    
-                    <!-- Mostrar erros de validação -->
-                    {% if form.errors %}
+
+            <!-- Right Section (Form Card with Overlap) -->
+            <div class="right-card">
+                <div class="form-container">
+                    <h2>Criar Conta</h2>
+                    <button class="google-login">
+                        <img
+                            src="{% static 'img/icons/icons8-google-logo.svg' %}"
+                            alt="Google Icon"
+                        />
+                        Acessar com Google
+                    </button>
+                    <p class="or">ou</p>
+
+                    <!-- Formulário Django -->
+                    <form method="POST">
+                        {% csrf_token %}
+
+                        <!-- Mostrar erros de validação -->
+                        {% if form.errors %}
                         <div class="form-errors">
                             <ul>
-                                {% for field in form %}
-                                    {% for error in field.errors %}
-                                        <li>{{ error }}</li>
-                                    {% endfor %}
+                                {% for field in form %} {% for error in
+                                field.errors %}
+                                <li>{{ error }}</li>
                                 {% endfor %}
                             </ul>
                         </div>
-                    {% endif %}
-                    
-                    <!-- Nome -->
-                    <div class="form__group">
-                        {{ form.nome.label_tag }}
-                        {{ form.nome }}
-                        <img src="{% static 'img/icons/cadastro/nome.svg' %}" alt="Ícone do Nome" class="input-icon">
-                    </div>
-                    
-                    <!-- Email -->
-                    <div class="form__group">
-                        {{ form.email.label_tag }}
-                        {{ form.email }}
-                        <img src="{% static 'img/icons/cadastro/email.svg' %}" alt="Ícone do Email" class="input-icon">
-                    </div>
-                    
-                    <!-- Senha -->
-                    <div class="form__group">
-                        {{ form.senha.label_tag }}
-                        {{ form.senha }}
-                        <img src="{% static 'img/icons/cadastro/senha.svg' %}" alt="Ícone do Senha" class="input-icon">
-                    </div>
-                    
-                    <!-- Botão de envio -->
-                    <button type="submit" class="submit-btn">Criar Conta</button>
-                </form>
-                
-                <p class="login-link">Já tem uma conta? <a href="{% url 'login' %}">Acessar!</a></p>
-            </div>
-        </div>
-    </div>
-    <script src="{%static 'js/bnt_submit.js'%}"></script>
-=======
-    <title>Criar Conta</title>
-    {% laod static %}
-    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
-</head>
-<body>
-    <div class="container">
-        <!-- Painel esquerdo -->
-        <div class="left-panel">
-            <div class="logo">MP</div>
-            <h1>Cadastre-se para receber novidades e ofertas exclusivas. É rápido e fácil!</h1>
-        </div>
+                        {% endif %}
 
-        <!-- Painel direito -->
-        <div class="right-panel">
-            <h2>Criar Conta</h2>
-            <div class="google-btn">
-                <img src="google-icon.png" alt="Google Logo">
-                <span>Acessar com Google</span>
+                        <!-- Nome -->
+                        <div class="form__group">
+                            {{ form.nome.label_tag }} {{ form.nome }}
+                            <img
+                                src="{% static 'img/icons/cadastro/nome.svg' %}"
+                                alt="Ícone do Nome"
+                                class="input-icon"
+                            />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form__group">
+                            {{ form.email.label_tag }} {{ form.email }}
+                            <img
+                                src="{% static 'img/icons/cadastro/email.svg' %}"
+                                alt="Ícone do Email"
+                                class="input-icon"
+                            />
+                        </div>
+
+                        <!-- Senha -->
+                        <div class="form__group">
+                            {{ form.senha.label_tag }} {{ form.senha }}
+                            <img
+                                src="{% static 'img/icons/cadastro/senha.svg' %}"
+                                alt="Ícone do Senha"
+                                class="input-icon"
+                            />
+                        </div>
+
+                        <!-- Botão de envio -->
+                        <button type="submit" class="submit-btn">
+                            Criar Conta
+                        </button>
+                    </form>
+
+                    <p class="login-link">
+                        Já tem uma conta?
+                        <a href="{% url 'login' %}">Acessar!</a>
+                    </p>
+                </div>
             </div>
-            <form action="#" method="POST">
-                <div class="input-group">
-                    <label for="name">Nome completo:</label>
-                    <input type="text" id="name" name="name" placeholder="Nome completo">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Email">
-                </div>
-                <div class="input-group">
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" placeholder="Senha">
-                </div>
-                <button type="submit" class="create-account-btn">Criar Conta</button>
-            </form>
-            <a href="#" class="already-have-account">Já tem uma conta? Acessar!</a>
         </div>
-    </div>
->>>>>>> 7cd64493f5faa67446c85f26b8e8efaab0e70381
-</body>
+        <script src="{%static 'js/bnt_submit.js'%}"></script>
+    </body>
 </html>

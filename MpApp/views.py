@@ -12,6 +12,7 @@ class IndexView(View):
     def get(self, request):
         return render(request, 'index.html', context={})
 
+
 class LoginView(FormView):
     template_name = 'login.html'
     form_class = LoginForm
