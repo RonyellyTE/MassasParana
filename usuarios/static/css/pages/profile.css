@@ -1,0 +1,468 @@
+.perfil-cliente {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .perfil-cliente .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .perfil-cliente .overlap {
+    position: absolute;
+    width: 128px;
+    height: 109px;
+    top: 33px;
+    left: 45px;
+    background-image: url(./img/logo-2.png);
+    background-size: 100% 100%;
+  }
+  
+  .perfil-cliente .logo {
+    position: absolute;
+    width: 128px;
+    height: 109px;
+    top: 0;
+    left: 0;
+  }
+  
+  .perfil-cliente .sumario-dados {
+    position: absolute;
+    width: 169px;
+    height: 288px;
+    top: 285px;
+    left: 60px;
+  }
+  
+  .perfil-cliente .text-wrapper {
+    width: 159px;
+    font-family: "Readex Pro-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-2 {
+    position: absolute;
+    width: 150px;
+    top: 93px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-3 {
+    position: absolute;
+    width: 120px;
+    top: 149px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-4 {
+    position: absolute;
+    width: 120px;
+    top: 205px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-5 {
+    position: absolute;
+    width: 120px;
+    top: 261px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .overlap-group {
+    position: absolute;
+    width: 910px;
+    height: 47px;
+    top: 56px;
+    left: 484px;
+  }
+  
+  .perfil-cliente .group {
+    position: absolute;
+    width: 114px;
+    height: 40px;
+    top: 0;
+    left: 652px;
+  }
+  
+  .perfil-cliente .ol-usu-rio {
+    width: 112px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: justify;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .sumario {
+    position: absolute;
+    width: 910px;
+    height: 40px;
+    top: 7px;
+    left: 0;
+  }
+  
+  .perfil-cliente .navbar-wrapper {
+    height: 40px;
+  }
+  
+  .perfil-cliente .navbar {
+    position: relative;
+    width: 918px;
+    height: 40px;
+  }
+  
+  .perfil-cliente .text-wrapper-6 {
+    width: 106px;
+    left: 119px;
+    position: absolute;
+    top: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-7 {
+    position: absolute;
+    width: 122px;
+    top: 0;
+    left: 403px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-8 {
+    width: 70px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-9 {
+    width: 92px;
+    left: 265px;
+    position: absolute;
+    top: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .vector {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 4px;
+    left: 578px;
+  }
+  
+  .perfil-cliente .img {
+    position: absolute;
+    width: 15px;
+    height: 24px;
+    top: 5px;
+    left: 821px;
+  }
+  
+  .perfil-cliente .group-2 {
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 5px;
+    left: 784px;
+  }
+  
+  .perfil-cliente .vector-2 {
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 6px;
+    left: 846px;
+  }
+  
+  .perfil-cliente .overlap-group-2 {
+    position: absolute;
+    width: 28px;
+    height: 26px;
+    top: 3px;
+    left: 882px;
+  }
+  
+  .perfil-cliente .vector-3 {
+    position: absolute;
+    width: 14px;
+    height: 12px;
+    top: 6px;
+    left: 7px;
+  }
+  
+  .perfil-cliente .vector-4 {
+    position: absolute;
+    width: 28px;
+    height: 26px;
+    top: 0;
+    left: 0;
+  }
+  
+  .perfil-cliente .ol-usu-rio-2 {
+    position: absolute;
+    width: 112px;
+    top: 0;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .dados-pessoais {
+    position: absolute;
+    width: 748px;
+    height: 490px;
+    top: 285px;
+    left: 333px;
+  }
+  
+  .perfil-cliente .overlap-group-3 {
+    position: relative;
+    width: 736px;
+    height: 490px;
+  }
+  
+  .perfil-cliente .group-3 {
+    position: absolute;
+    width: 736px;
+    height: 490px;
+    top: 0;
+    left: 0;
+  }
+  
+  .perfil-cliente .text-wrapper-10 {
+    position: absolute;
+    width: 173px;
+    top: 0;
+    left: 0;
+    font-family: "Readex Pro-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .rectangle {
+    position: absolute;
+    width: 734px;
+    height: 437px;
+    top: 53px;
+    left: 0;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #d94135;
+  }
+  
+  .perfil-cliente .text-wrapper-11 {
+    position: absolute;
+    width: 188px;
+    top: 91px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-12 {
+    position: absolute;
+    width: 188px;
+    top: 183px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-13 {
+    position: absolute;
+    width: 188px;
+    top: 275px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-14 {
+    position: absolute;
+    width: 188px;
+    top: 367px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-15 {
+    position: absolute;
+    width: 238px;
+    top: 91px;
+    left: 408px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-16 {
+    position: absolute;
+    width: 238px;
+    top: 183px;
+    left: 406px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .text-wrapper-17 {
+    position: absolute;
+    width: 238px;
+    top: 275px;
+    left: 406px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .div-wrapper {
+    position: absolute;
+    width: 253px;
+    height: 55px;
+    top: 790px;
+    left: 333px;
+    background-image: url(./img/rectangle-84.svg);
+    background-size: 100% 100%;
+  }
+  
+  .perfil-cliente .text-wrapper-18 {
+    position: absolute;
+    width: 151px;
+    height: 19px;
+    top: 17px;
+    left: 51px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .perfil-cliente .overlap-2 {
+    position: absolute;
+    width: 253px;
+    height: 55px;
+    top: 790px;
+    left: 597px;
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .perfil-cliente .text-wrapper-19 {
+    position: absolute;
+    width: 118px;
+    height: 19px;
+    top: 16px;
+    left: 67px;
+    font-family: "Inter-ExtraLight", Helvetica;
+    font-weight: 200;
+    color: #000000;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
