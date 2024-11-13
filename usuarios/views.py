@@ -66,3 +66,8 @@ class PasswordResetView(View):
 class ProfileView(View):
     def get(self, request):
         return render(request, 'profile.html', context={})
+    
+class HomepageView(View):
+    def get(self, request):
+        return render(request, 'homepage.html', context={})
+    

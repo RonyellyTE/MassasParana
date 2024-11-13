@@ -1,0 +1,692 @@
+.homepage, 
+.homepage * {
+  box-sizing: border-box;
+}
+.homepage {
+  background: #ffffff;
+  height: 5404px;
+  position: relative;
+  overflow: hidden;
+}
+.pao-fresco-de-vista-frontal {
+  width: 329px;
+  height: 497px;
+  position: absolute;
+  left: 187px;
+  top: 780px;
+  object-fit: cover;
+}
+.front-view-delicious-chocolate-cake-concept {
+  width: 328px;
+  height: 497px;
+  position: absolute;
+  left: 560px;
+  top: 780px;
+  object-fit: cover;
+}
+.bolos {
+  color: #ffffff;
+  text-align: center;
+  font-family: "ReadexPro-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 688px;
+  top: 1008px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.high-angle-food-croquettes-arrangement {
+  width: 324px;
+  height: 497px;
+  position: absolute;
+  left: 932px;
+  top: 780px;
+  object-fit: cover;
+}
+.salgados {
+  color: #ffffff;
+  text-align: center;
+  font-family: "ReadexPro-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 1037px;
+  top: 1008px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rectangle-36 {
+  background: #d9d9d9;
+  border-radius: 25px;
+  width: 266px;
+  height: 58px;
+  position: absolute;
+  left: 640px;
+  top: 2349px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.venha-fazer-parte-da-nossa-equipe {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  position: absolute;
+  left: 186px;
+  top: 4771px;
+  width: 586px;
+}
+.rectangle-42 {
+  background: #f0f0f0;
+  width: 1440px;
+  height: 820px;
+  position: absolute;
+  left: 0px;
+  top: 4584px;
+}
+.acreditamos-que-pessoas-fazem-a-diferen-a-venha-fazer-a-diferen-a-com-a-gente {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  left: 205px;
+  top: 4910px;
+  width: 429px;
+}
+.rectangle-43 {
+  background: #ffffff;
+  border-radius: 25px;
+  width: 232px;
+  height: 69px;
+  position: absolute;
+  left: 205px;
+  top: 5033px;
+}
+.junte-se-a-n-s {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  left: 232px;
+  top: 5052px;
+  width: 179px;
+}
+.conhe-a-mais {
+  color: #d94135;
+  text-align: center;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  position: absolute;
+  left: 640px;
+  top: 2360px;
+  width: 266px;
+  height: 47px;
+}
+.compromisso-com-a-qualidade {
+  color: #d94135;
+  text-align: center;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  position: absolute;
+  left: 640px;
+  top: 2054px;
+}
+.p-es {
+  color: #ffffff;
+  text-align: center;
+  font-family: "ReadexPro-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 326px;
+  top: 1003px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.images-1 {
+  border-radius: 20px;
+  width: 366px;
+  height: 516px;
+  position: absolute;
+  left: 197px;
+  top: 2015px;
+  object-fit: cover;
+}
+.fabrica-o-pr-pria-com-reposi-o-di-ria {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  position: absolute;
+  left: 640px;
+  top: 2099px;
+  width: 441px;
+}
+.dedicamos-a-proporcionar-a-voc-uma-experi-ncia-nica-com-produtos-de-panifica-o-e-confeitaria-de-alt-ssima-qualidade-nossos-p-es-e-doces-s-o-produzidos-diariamente-com-ingredientes-frescos-e-priorizamos-a-excel-ncia-em-cada-detalhe-desde-a-sele-o-dos-ingredientes-at-o-atendimento-ao-cliente {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  position: absolute;
+  left: 640px;
+  top: 2204px;
+  width: 540px;
+}
+.venha-fazer-parte-da-nossa-equipe2 {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  position: absolute;
+  left: 205px;
+  top: 4837px;
+  width: 586px;
+}
+.uma-experi-ncia-nica {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  position: absolute;
+  left: 490px;
+  top: 3929px;
+  width: 492px;
+}
+.screenshot-20240830-225301-1 {
+  border-radius: 20px;
+  width: 488px;
+  height: 768px;
+  position: absolute;
+  left: 861px;
+  top: 4432px;
+  object-fit: cover;
+}
+.rectangle-41 {
+  background: #d9d9d9;
+  border-radius: 30px;
+  width: 298px;
+  height: 69px;
+  position: absolute;
+  left: 549px;
+  top: 4269px;
+}
+.venha-visitar {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-SemiBold", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  left: 618px;
+  top: 4288px;
+  width: 184px;
+}
+.na-massas-paran-unimos-tradi-o-e-inova-o-para-criar-p-es-e-doces-que-fazem-toda-a-diferen-a-no-seu-dia-a-dia-nossos-produtos-s-o-preparados-com-ingredientes-selecionados-garantindo-frescor-e-sabor-incompar-veis-visite-nos-e-descubra-um-espa-o-pensado-para-proporcionar-a-voc-momentos-deliciosos-e-inesquec-veis {
+  color: #d94135;
+  text-align: justified;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  position: absolute;
+  left: 364px;
+  top: 4013px;
+  width: 712px;
+}
+.image-5 {
+  width: 1445px;
+  height: 574px;
+  position: absolute;
+  left: -5px;
+  top: 1341px;
+  object-fit: cover;
+}
+.surpreenda-se {
+  color: #f6eae9;
+  text-align: center;
+  font-family: "ReadexPro-Bold", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  position: absolute;
+  left: 587px;
+  top: 1628px;
+}
+.rectangle-55 {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 156px;
+  height: 50px;
+  position: absolute;
+  left: 642px;
+  top: 1712px;
+}
+.conhe-a {
+  color: #d94135;
+  text-align: center;
+  font-family: "ReadexPro-Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  left: 676px;
+  top: 1725px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.i-love {
+  color: #d94135;
+  text-align: center;
+  font-family: "SourceSerif4-Regular", sans-serif;
+  font-size: 128px;
+  font-weight: 400;
+  position: absolute;
+  left: 73px;
+  top: 2702px;
+  width: 490px;
+  height: 160px;
+}
+.cake {
+  color: #d94135;
+  text-align: center;
+  font-family: "SourceSerif4-Regular", sans-serif;
+  font-size: 128px;
+  font-weight: 400;
+  position: absolute;
+  left: 836px;
+  top: 3690px;
+  width: 490px;
+  height: 160px;
+}
+.olaa-1 {
+  width: 384px;
+  height: 714px;
+  position: absolute;
+  left: 68px;
+  top: 2921px;
+  overflow: hidden;
+}
+.vector {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.vector2 {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.group {
+  position: absolute;
+  inset: 0;
+}
+.rectangle {
+  width: 267.87%;
+  height: 100%;
+  position: absolute;
+  right: -147.64%;
+  left: -20.23%;
+  bottom: 0%;
+  top: 0%;
+  object-fit: cover;
+}
+.olaa-1-1 {
+  width: 281.25%;
+  height: 268.91%;
+  position: absolute;
+  right: -43.23%;
+  left: -138.02%;
+  bottom: -87.54%;
+  top: -81.37%;
+  overflow: hidden;
+}
+.vector3 {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.vector4 {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.rectangle2 {
+  width: 266.3%;
+  height: 100%;
+  position: absolute;
+  right: -36.91%;
+  left: -129.38%;
+  bottom: 0%;
+  top: 0%;
+  object-fit: cover;
+}
+.olaa-1-12 {
+  width: 384px;
+  height: 720px;
+  position: absolute;
+  left: 528px;
+  top: 2916px;
+  overflow: hidden;
+}
+.vector5 {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.vector6 {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.rectangle-68 {
+  background: #ffffff;
+  border-style: solid;
+  border-color: #d94135;
+  border-width: 0px 0px 1px 0px;
+  width: 17.08%;
+  height: 0.06%;
+  position: absolute;
+  right: 72.99%;
+  left: 9.93%;
+  bottom: 46.93%;
+  top: 53.02%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.rectangle-69 {
+  background: #ffffff;
+  border-style: solid;
+  border-color: #d94135;
+  border-width: 0px 0px 1px 0px;
+  width: 17.08%;
+  height: 0.06%;
+  position: absolute;
+  right: 14.72%;
+  left: 68.19%;
+  bottom: 28.31%;
+  top: 71.63%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+.olaa-2-1 {
+  width: 384px;
+  height: 718px;
+  position: absolute;
+  left: 988px;
+  top: 2917px;
+  overflow: hidden;
+}
+.vector7 {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.vector8 {
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  top: -10%;
+  overflow: visible;
+}
+.rectangle3 {
+  width: 237.04%;
+  height: 100%;
+  position: absolute;
+  right: -91.02%;
+  left: -46.02%;
+  bottom: 0%;
+  top: 0%;
+  object-fit: cover;
+}
+.rectangle-13 {
+  width: 1440px;
+  height: 748px;
+  position: absolute;
+  left: 0px;
+  top: -7px;
+  overflow: visible;
+}
+.frame-1 {
+  width: 1435px;
+  height: 710px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.rectangle-12 {
+  background: rgba(217, 217, 217, 0);
+  width: 1440px;
+  height: 177px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.logo {
+  height: auto;
+  position: absolute;
+  left: 89.69px;
+  top: 47.27px;
+  overflow: visible;
+}
+.cabecalho {
+  position: absolute;
+  inset: 0;
+}
+.group-1 {
+  width: 905.27px;
+  height: 43.73px;
+  position: static;
+}
+.produtos {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  left: 571px;
+  top: 70px;
+  width: 106px;
+  height: 33.93px;
+}
+.sobre-n-s {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  left: 855px;
+  top: 70px;
+  width: 122px;
+  height: 33.93px;
+}
+.home {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  left: 452px;
+  top: 70px;
+  width: 70px;
+  height: 42.66px;
+}
+.contato {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  left: 717px;
+  top: 70px;
+  width: 92px;
+  height: 33.93px;
+}
+.vector9 {
+  width: 1.63%;
+  height: 3.2%;
+  position: absolute;
+  right: 26.85%;
+  left: 71.53%;
+  bottom: 86.96%;
+  top: 9.84%;
+  overflow: visible;
+}
+.vector10 {
+  width: 1.06%;
+  height: 3.36%;
+  position: absolute;
+  right: 10.54%;
+  left: 88.4%;
+  bottom: 86.68%;
+  top: 9.97%;
+  overflow: visible;
+}
+.group2 {
+  width: 1.67%;
+  height: 3.1%;
+  position: absolute;
+  right: 12.43%;
+  left: 85.9%;
+  bottom: 86.81%;
+  top: 10.1%;
+  overflow: visible;
+}
+.vector11 {
+  width: 1.77%;
+  height: 3.42%;
+  position: absolute;
+  right: 8.09%;
+  left: 90.14%;
+  bottom: 86.48%;
+  top: 10.1%;
+  overflow: visible;
+}
+.vector12 {
+  width: 0.97%;
+  height: 1.74%;
+  position: absolute;
+  right: 5.9%;
+  left: 93.12%;
+  bottom: 87.64%;
+  top: 10.61%;
+  overflow: visible;
+}
+.vector13 {
+  width: 1.94%;
+  height: 3.61%;
+  position: absolute;
+  right: 5.42%;
+  left: 92.64%;
+  bottom: 86.68%;
+  top: 9.71%;
+  overflow: visible;
+}
+.group-3 {
+  width: 121px;
+  height: 42px;
+  position: static;
+}
+.rectangle-21 {
+  background: rgba(189, 164, 164, 0.45);
+  border-radius: 20px;
+  width: 120px;
+  height: 42px;
+  position: absolute;
+  left: 1086px;
+  top: 63px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.vector14 {
+  width: 1.88%;
+  height: 3.23%;
+  position: absolute;
+  right: 21.74%;
+  left: 76.39%;
+  bottom: 87.45%;
+  top: 9.32%;
+  overflow: visible;
+}
+.entrar {
+  color: #d94135;
+  text-align: left;
+  font-family: "ReadexPro-Light", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  left: 1136px;
+  top: 70px;
+  width: 71px;
+  height: 33.93px;
+}
+.com-carinho-e-tradi-o-fazemos-o-seu-caf-perfeito-todos-os-dias {
+  color: #d94135;
+  text-align: center;
+  font-family: "ReadexPro-Medium", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  position: absolute;
+  left: calc(50% - 336.5px);
+  top: calc(50% - 81px);
+  width: 674px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

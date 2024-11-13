@@ -1,4 +1,4 @@
-.perfil-cliente {
+.client-profile {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -6,14 +6,14 @@
     width: 100%;
   }
   
-  .perfil-cliente .div {
+  .client-profile .menu {
     background-color: #ffffff;
     width: 1440px;
     height: 1024px;
     position: relative;
   }
   
-  .perfil-cliente .overlap {
+  .client-profile .image-logo {
     position: absolute;
     width: 128px;
     height: 109px;
@@ -23,7 +23,7 @@
     background-size: 100% 100%;
   }
   
-  .perfil-cliente .logo {
+  .client-profile .logo {
     position: absolute;
     width: 128px;
     height: 109px;
@@ -31,7 +31,7 @@
     left: 0;
   }
   
-  .perfil-cliente .sumario-dados {
+  .client-profile .customer-data {
     position: absolute;
     width: 169px;
     height: 288px;
@@ -39,7 +39,7 @@
     left: 60px;
   }
   
-  .perfil-cliente .text-wrapper {
+  .client-profile .hello-client {
     width: 159px;
     font-family: "Readex Pro-Medium", Helvetica;
     font-weight: 500;
@@ -53,7 +53,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-2 {
+  .client-profile .personal-data {
     position: absolute;
     width: 150px;
     top: 93px;
@@ -67,7 +67,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-3 {
+  .client-profile .orders {
     position: absolute;
     width: 120px;
     top: 149px;
@@ -81,7 +81,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-4 {
+  .client-profile .cards {
     position: absolute;
     width: 120px;
     top: 205px;
@@ -95,7 +95,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-5 {
+  .client-profile .exit {
     position: absolute;
     width: 120px;
     top: 261px;
@@ -109,7 +109,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .overlap-group {
+  .client-profile .profile-space {
     position: absolute;
     width: 910px;
     height: 47px;
@@ -117,7 +117,7 @@
     left: 484px;
   }
   
-  .perfil-cliente .group {
+  .client-profile .navigation-profile {
     position: absolute;
     width: 114px;
     height: 40px;
@@ -125,7 +125,7 @@
     left: 652px;
   }
   
-  .perfil-cliente .ol-usu-rio {
+  .client-profile .user-profile {
     width: 112px;
     font-family: "Readex Pro-Light", Helvetica;
     font-weight: 300;
@@ -139,7 +139,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .sumario {
+  .client-profile .header {
     position: absolute;
     width: 910px;
     height: 40px;
@@ -147,17 +147,17 @@
     left: 0;
   }
   
-  .perfil-cliente .navbar-wrapper {
+  .client-profile .navigation-header {
     height: 40px;
   }
   
-  .perfil-cliente .navbar {
+  .client-profile .space-header {
     position: relative;
     width: 918px;
     height: 40px;
   }
   
-  .perfil-cliente .text-wrapper-6 {
+  .client-profile .products {
     width: 106px;
     left: 119px;
     position: absolute;
@@ -170,7 +170,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-7 {
+  .client-profile .about-us {
     position: absolute;
     width: 122px;
     top: 0;
@@ -183,7 +183,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-8 {
+  .client-profile .homepage {
     width: 70px;
     left: 0;
     position: absolute;
@@ -196,7 +196,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-9 {
+  .client-profile .contact {
     width: 92px;
     left: 265px;
     position: absolute;
@@ -209,7 +209,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .vector {
+  .client-profile .vetor-carrinho {
     position: absolute;
     width: 23px;
     height: 23px;
@@ -217,7 +217,7 @@
     left: 578px;
   }
   
-  .perfil-cliente .img {
+  .client-profile .vetor-fb {
     position: absolute;
     width: 15px;
     height: 24px;
@@ -225,7 +225,7 @@
     left: 821px;
   }
   
-  .perfil-cliente .group-2 {
+  .client-profile .image-01 {
     position: absolute;
     width: 26px;
     height: 24px;
@@ -233,7 +233,7 @@
     left: 784px;
   }
   
-  .perfil-cliente .vector-2 {
+  .client-profile .image-02 {
     position: absolute;
     width: 26px;
     height: 24px;
@@ -241,7 +241,7 @@
     left: 846px;
   }
   
-  .perfil-cliente .overlap-group-2 {
+  .client-profile .group-images {
     position: absolute;
     width: 28px;
     height: 26px;
@@ -249,7 +249,7 @@
     left: 882px;
   }
   
-  .perfil-cliente .vector-3 {
+  .client-profile .image-03 {
     position: absolute;
     width: 14px;
     height: 12px;
@@ -257,7 +257,7 @@
     left: 7px;
   }
   
-  .perfil-cliente .vector-4 {
+  .client-profile .image-04 {
     position: absolute;
     width: 28px;
     height: 26px;
@@ -265,7 +265,7 @@
     left: 0;
   }
   
-  .perfil-cliente .ol-usu-rio-2 {
+  .client-profile .user {
     position: absolute;
     width: 112px;
     top: 0;
@@ -279,7 +279,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .dados-pessoais {
+  .client-profile .dados-pessoais {
     position: absolute;
     width: 748px;
     height: 490px;
@@ -287,13 +287,13 @@
     left: 333px;
   }
   
-  .perfil-cliente .overlap-group-3 {
+  .client-profile .overlap-group-3 {
     position: relative;
     width: 736px;
     height: 490px;
   }
   
-  .perfil-cliente .group-3 {
+  .client-profile .group-3 {
     position: absolute;
     width: 736px;
     height: 490px;
@@ -301,7 +301,7 @@
     left: 0;
   }
   
-  .perfil-cliente .text-wrapper-10 {
+  .client-profile .text-wrapper-10 {
     position: absolute;
     width: 173px;
     top: 0;
@@ -314,7 +314,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .rectangle {
+  .client-profile .rectangle {
     position: absolute;
     width: 734px;
     height: 437px;
@@ -325,7 +325,7 @@
     border-color: #d94135;
   }
   
-  .perfil-cliente .text-wrapper-11 {
+  .client-profile .name {
     position: absolute;
     width: 188px;
     top: 91px;
@@ -338,7 +338,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-12 {
+  .client-profile .email {
     position: absolute;
     width: 188px;
     top: 183px;
@@ -351,7 +351,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-13 {
+  .client-profile .cpf {
     position: absolute;
     width: 188px;
     top: 275px;
@@ -364,7 +364,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-14 {
+  .client-profile .date_birth {
     position: absolute;
     width: 188px;
     top: 367px;
@@ -377,7 +377,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-15 {
+  .client-profile .surname {
     position: absolute;
     width: 238px;
     top: 91px;
@@ -390,7 +390,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-16 {
+  .client-profile .gender{
     position: absolute;
     width: 238px;
     top: 183px;
@@ -403,7 +403,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .text-wrapper-17 {
+  .client-profile .telephone {
     position: absolute;
     width: 238px;
     top: 275px;
@@ -416,7 +416,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .div-wrapper {
+  .client-profile .div-wrapper {
     position: absolute;
     width: 253px;
     height: 55px;
@@ -426,7 +426,7 @@
     background-size: 100% 100%;
   }
   
-  .perfil-cliente .text-wrapper-18 {
+  .client-profile .text-wrapper-18 {
     position: absolute;
     width: 151px;
     height: 19px;
@@ -441,7 +441,7 @@
     line-height: normal;
   }
   
-  .perfil-cliente .overlap-2 {
+  .client-profile .overlap-2 {
     position: absolute;
     width: 253px;
     height: 55px;
@@ -452,7 +452,7 @@
     border-color: #000000;
   }
   
-  .perfil-cliente .text-wrapper-19 {
+  .client-profile .text-wrapper-19 {
     position: absolute;
     width: 118px;
     height: 19px;
