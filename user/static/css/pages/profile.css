@@ -1,0 +1,468 @@
+.client-profile {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .client-profile .menu {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .client-profile .image-logo {
+    position: absolute;
+    width: 128px;
+    height: 109px;
+    top: 33px;
+    left: 45px;
+    background-image: url(./img/logo-2.png);
+    background-size: 100% 100%;
+  }
+  
+  .client-profile .logo {
+    position: absolute;
+    width: 128px;
+    height: 109px;
+    top: 0;
+    left: 0;
+  }
+  
+  .client-profile .customer-data {
+    position: absolute;
+    width: 169px;
+    height: 288px;
+    top: 285px;
+    left: 60px;
+  }
+  
+  .client-profile .hello-client {
+    width: 159px;
+    font-family: "Readex Pro-Medium", Helvetica;
+    font-weight: 500;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .personal-data {
+    position: absolute;
+    width: 150px;
+    top: 93px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .orders {
+    position: absolute;
+    width: 120px;
+    top: 149px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .cards {
+    position: absolute;
+    width: 120px;
+    top: 205px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .exit {
+    position: absolute;
+    width: 120px;
+    top: 261px;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .profile-space {
+    position: absolute;
+    width: 910px;
+    height: 47px;
+    top: 56px;
+    left: 484px;
+  }
+  
+  .client-profile .navigation-profile {
+    position: absolute;
+    width: 114px;
+    height: 40px;
+    top: 0;
+    left: 652px;
+  }
+  
+  .client-profile .user-profile {
+    width: 112px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: justify;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .header {
+    position: absolute;
+    width: 910px;
+    height: 40px;
+    top: 7px;
+    left: 0;
+  }
+  
+  .client-profile .navigation-header {
+    height: 40px;
+  }
+  
+  .client-profile .space-header {
+    position: relative;
+    width: 918px;
+    height: 40px;
+  }
+  
+  .client-profile .products {
+    width: 106px;
+    left: 119px;
+    position: absolute;
+    top: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .about-us {
+    position: absolute;
+    width: 122px;
+    top: 0;
+    left: 403px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .homepage {
+    width: 70px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .contact {
+    width: 92px;
+    left: 265px;
+    position: absolute;
+    top: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .vetor-carrinho {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 4px;
+    left: 578px;
+  }
+  
+  .client-profile .vetor-fb {
+    position: absolute;
+    width: 15px;
+    height: 24px;
+    top: 5px;
+    left: 821px;
+  }
+  
+  .client-profile .image-01 {
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 5px;
+    left: 784px;
+  }
+  
+  .client-profile .image-02 {
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 6px;
+    left: 846px;
+  }
+  
+  .client-profile .group-images {
+    position: absolute;
+    width: 28px;
+    height: 26px;
+    top: 3px;
+    left: 882px;
+  }
+  
+  .client-profile .image-03 {
+    position: absolute;
+    width: 14px;
+    height: 12px;
+    top: 6px;
+    left: 7px;
+  }
+  
+  .client-profile .image-04 {
+    position: absolute;
+    width: 28px;
+    height: 26px;
+    top: 0;
+    left: 0;
+  }
+  
+  .client-profile .user {
+    position: absolute;
+    width: 112px;
+    top: 0;
+    left: 0;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #d94135;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .dados-pessoais {
+    position: absolute;
+    width: 748px;
+    height: 490px;
+    top: 285px;
+    left: 333px;
+  }
+  
+  .client-profile .overlap-group-3 {
+    position: relative;
+    width: 736px;
+    height: 490px;
+  }
+  
+  .client-profile .group-3 {
+    position: absolute;
+    width: 736px;
+    height: 490px;
+    top: 0;
+    left: 0;
+  }
+  
+  .client-profile .text-wrapper-10 {
+    position: absolute;
+    width: 173px;
+    top: 0;
+    left: 0;
+    font-family: "Readex Pro-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .rectangle {
+    position: absolute;
+    width: 734px;
+    height: 437px;
+    top: 53px;
+    left: 0;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #d94135;
+  }
+  
+  .client-profile .name {
+    position: absolute;
+    width: 188px;
+    top: 91px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .email {
+    position: absolute;
+    width: 188px;
+    top: 183px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .cpf {
+    position: absolute;
+    width: 188px;
+    top: 275px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .date_birth {
+    position: absolute;
+    width: 188px;
+    top: 367px;
+    left: 41px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .surname {
+    position: absolute;
+    width: 238px;
+    top: 91px;
+    left: 408px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .gender{
+    position: absolute;
+    width: 238px;
+    top: 183px;
+    left: 406px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .telephone {
+    position: absolute;
+    width: 238px;
+    top: 275px;
+    left: 406px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .div-wrapper {
+    position: absolute;
+    width: 253px;
+    height: 55px;
+    top: 790px;
+    left: 333px;
+    background-image: url(./img/rectangle-84.svg);
+    background-size: 100% 100%;
+  }
+  
+  .client-profile .text-wrapper-18 {
+    position: absolute;
+    width: 151px;
+    height: 19px;
+    top: 17px;
+    left: 51px;
+    font-family: "Readex Pro-Light", Helvetica;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .client-profile .overlap-2 {
+    position: absolute;
+    width: 253px;
+    height: 55px;
+    top: 790px;
+    left: 597px;
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .client-profile .text-wrapper-19 {
+    position: absolute;
+    width: 118px;
+    height: 19px;
+    top: 16px;
+    left: 67px;
+    font-family: "Inter-ExtraLight", Helvetica;
+    font-weight: 200;
+    color: #000000;
+    font-size: 11px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  

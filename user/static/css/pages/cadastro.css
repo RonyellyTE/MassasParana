@@ -13,11 +13,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-<<<<<<< HEAD:static/css/pages/cadastro.css
     background: url("/static/img/background.png") no-repeat center center/cover;
-=======
-    background: url('/static/img/backgrounds/background.png') no-repeat center center/cover;
->>>>>>> 1b84843f13117acacd0c9bf153e0a1a72a256212:usuarios/static/css/pages/cadastro.css
+   /* background: url('/static/img/backgrounds/background.png') no-repeat center center/cover;*/
     padding: 10px;
 }
 
@@ -40,7 +37,7 @@ body {
     font-size: x-large;
     background: linear-gradient(-180deg, var(--secondary-color), #894932);
     border: white solid 4px;
-    padding: 60px;
+    padding: 90px;
     border-radius: 40px;
     display: flex;
     justify-content: center;
@@ -70,7 +67,7 @@ body {
     width: 50%;
     height: 93%;
     background-color: white;
-    padding: 70px;
+    padding: 90px;
     border-radius: 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
