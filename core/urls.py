@@ -18,8 +18,12 @@ Descrição: Define o mapeamento de URLs para views. É aqui que você configura
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('usuarios.urls'))
+    path('user', include('user.urls'))
 ]
