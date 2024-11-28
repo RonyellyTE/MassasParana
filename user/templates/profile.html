@@ -1,90 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Perfil Cliente</title>
-        {% load static %}
-        <link
-            rel="stylesheet"
-            href="{% static 'css/components/bnt_submit.css' %}"/>
-        <link rel="stylesheet" href="{% static 'css/pages/profile.css' %}" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-  <body>
-    <div class="client-profile">
-      <div class="menu">
-        <div class="image-logo"><img class="logo" src="img/logo.png" /></div>
-        <div class="customer-data">
-          <div class="hello-client">Olá, Cliente!</div>
-          <div class="personal-data">Dados pessoais</div>
-          <div class="orders">Pedidos</div>
-          <div class="cards">Cartões</div>
-          <div class="exit">Sair</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Massas Paraná</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/pages/profile.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <h2>Bem-vindo, {{ user_name }}!</h2>  <!-- Exibe o nome do usuário -->
+            <p>Email: {{ user_email }}</p>  <!-- Exibe o email do usuário -->
+
+            <a href="{% url 'logout' %}" class="logout-btn">Sair</a>
         </div>
-        <div class="profile-space">
-          <div class="navigation-profile">
-            <div class="user-profile">Olá.<br />(Usuário)</div>
-          </div>
-          <div class="header">
-            <div class="navigation-header">
-              <div class="space-header">
-                <div class="products">Produtos</div>
-                <div class="about-us">Sobre Nós</div>
-                <div class="homepage">Home</div>
-                <div class="contact">Contato</div>
-                <img class="vetor-carrinho" src="img/vector-carrinho.svg" />
-                <img class="vetor-fb" src="img/vector-facebook.svg" />
-                <img class="image-01" src="img/group.png" />
-                <img class="image-02" src="img/vector-2.svg" />
-                <div class="group-images">
-                  <img class="image-03" src="img/image.svg" /> <img class="image-04" src="img/vector-3.svg" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="group-user">
-            <div class="user">Olá.<br />(Usuário)</div>
-          </div>
-          <div class="sumary">
-            <div class="navigation-sumary">
-              <div class="spacenav-sumary">
-                <div class="sub-products">Produtos</div>
-                <div class="text-wrapper-7">Sobre Nós</div>
-                <div class="text-wrapper-8">Home</div>
-                <div class="text-wrapper-9">Contato</div>
-                <img class="vector" src="img/vector-7.svg" />
-                <img class="img" src="img/vector-6.svg" />
-                <img class="group-2" src="img/image.png" />
-                <img class="vector-2" src="img/vector.svg" />
-                <div class="overlap-group-2">
-                  <img class="vector-3" src="img/vector-4.svg" /> <img class="vector-4" src="img/vector-8.svg" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="dados-pessoais">
-          <div class="overlap-group-3">
-            <div class="group-3">
-              <div class="text-wrapper-10">Dados pessoais</div>
-              <div class="rectangle"></div>
-            </div>
-            <div class="name">Nome</div>
-            <div class="email">Email</div>
-            <div class="cpf">CPF</div>
-            <div class="date_birth">Data de nascimento</div>
-            <div class="surname">Sobrenome</div>
-            <div class="gender">Gênero</div>
-            <div class="telephone">Telefone</div>
-          </div>
-        </div>
-        <div class="div-wrapper"><div class="text-wrapper-18">EDITAR</div></div>
-        <div class="overlap-2"><div class="text-wrapper-19">SALVAR E CONTINUAR</div></div>
-      </div>
     </div>
-  </body>
+</body>
 </html>
