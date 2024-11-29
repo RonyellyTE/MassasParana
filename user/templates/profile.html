@@ -1,20 +1,49 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Massas Paraná</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/pages/profile.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 </head>
 <body>
-    <div class="container">
-        <div class="profile-container">
-            <h2>Bem-vindo, {{ user_name }}!</h2>  <!-- Exibe o nome do usuário -->
-            <p>Email: {{ user_email }}</p>  <!-- Exibe o email do usuário -->
+  <div class="container">
+    {% include 'header.html' %}
 
-            <a href="{% url 'logout' %}" class="logout-btn">Sair</a>
-        </div>
+    <div class="content">
+      <aside class="menu-lateral">
+        <h2>Olá, {{ user_name }}!</h2>
+        <nav class="navegacao">
+          <button class="btn-navegacao" onclick="mostrarSecao('dados-pessoais')">Dados Pessoais</button>
+          <button class="btn-navegacao" onclick="mostrarSecao('pedidos')">Pedidos</button>
+          <button class="btn-navegacao" onclick="mostrarSecao('cartoes')">Cartões</button>
+          <a href="{% url 'logout' %}" class="btn-navegacao sair">Sair</a>
+        </nav>
+      </aside>
+
+      <main class="conteudo">
+        <!-- Seção: Dados Pessoais -->
+        <section id="dados-pessoais" class="secao ativa">
+          <h2>Dados Pessoais</h2>
+          <div class="informacoes">
+            <div><strong>Nome:</strong> {{ cliente.nome }}</div>
+            <div><strong>Email:</strong> {{ cliente.email }}</div>
+            <div><strong>Gênero:</strong> {{ cliente.genero|default:"Não informado" }}</div>
+            <div><strong>CPF:</strong> {{ cliente.cpf|default:"-" }}</div>
+            <div><strong>Data de nascimento:</strong> {{ cliente.data_nascimento|date:"d/m/Y" }}</div>
+            <div><strong>Telefone:</strong> {{ cliente.telefone|default:"-" }}</div>
+          </div>
+          <div class="botoes">
+            <button class="btn-editar">Editar</button>
+            <button class="btn-salvar">Salvar e Continuar</button>
+          </div>
+        </section>
+
+        <!-- Outras seções omitidas por brevidade -->
+      </main>
     </div>
+  </div>
+  <script src="{% static 'js/profile.js' %}"></script>
 </body>
 </html>

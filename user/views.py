@@ -3,6 +3,7 @@ from django.views import View
 from django.views.generic import FormView
 from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password
+from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
 from django.db import IntegrityError
 from django.contrib import messages
@@ -24,7 +25,7 @@ class IndexView(View):
 class LoginView(FormView):
     template_name = 'login.html'
     form_class = LoginForm
-    success_url = reverse_lazy('profile')  # URL de sucesso após o login
+    success_url = reverse_lazy('profile')  # URL do perfil do cliente
 
     def form_valid(self, form):
         email = form.cleaned_data['email']
@@ -36,13 +37,10 @@ class LoginView(FormView):
 
             # Verifica a senha
             if cliente.check_password(senha):
-                # Cria a sessão do usuário
-                self.request.session['user_id'] = cliente.id
+                # Cria a sessão do cliente
+                self.request.session['cliente_id'] = cliente.id
                 self.request.session['user_name'] = cliente.nome
-                self.request.session['user_email'] = cliente.email  # Adicionando o email na sessão
-
-                # Adiciona uma mensagem de sucesso
-                messages.success(self.request, f"Bem-vindo(a), {cliente.nome}!")
+                self.request.session['user_email'] = cliente.email
 
                 # Redireciona para o perfil
                 return redirect(self.success_url)
@@ -56,6 +54,7 @@ class LoginView(FormView):
     def form_invalid(self, form):
         messages.error(self.request, "Erro no login. Verifique as informações e tente novamente.")
         return super().form_invalid(form)
+
 
 
 class RegisterView(FormView):
@@ -103,16 +102,23 @@ class PasswordResetView(View):
     def get(self, request):
         return render(request, self.template_name, context={})
 
-from django.shortcuts import redirect
-
-from django.shortcuts import render
-from django.views import View
-
 class ProfileView(View):
     def get(self, request):
-        user_name = request.session.get('user_name', 'Usuário')  # Recupera o nome do usuário da sessão
-        user_email = request.session.get('user_email', 'Email não encontrado')  # Recupera o email da sessão
-        return render(request, 'profile.html', {'user_name': user_name, 'user_email': user_email})
+        # Recupera o ID do cliente autenticado
+        cliente_id = request.session.get('cliente_id')
+        if not cliente_id:
+            messages.error(request, "Você precisa estar logado para acessar essa página.")
+            return redirect('login')
+
+        # Busca o cliente no banco de dados
+        cliente = get_object_or_404(Cliente, id=cliente_id)
+
+        context = {
+            'user_name': cliente.nome,
+            'cliente': cliente,
+        }
+        return render(request, 'profile.html', context)
+
 
 
 class HomepageView(View):
@@ -121,4 +127,7 @@ class HomepageView(View):
     
 class LogoutUserView(View):
     def get(self, request):
-        return HttpResponse("Deslogado")
+        # Limpa os dados da sessão
+        request.session.flush()
+        messages.success(request, "Você foi deslogado com sucesso.")
+        return redirect('login')  # Redireciona para a página de login
