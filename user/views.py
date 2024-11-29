@@ -131,3 +131,7 @@ class LogoutUserView(View):
         request.session.flush()
         messages.success(request, "Você foi deslogado com sucesso.")
         return redirect('login')  # Redireciona para a página de login
+
+class ProductsView(View):
+    def get(self, request):
+        return render(request, 'products.html', context={})
