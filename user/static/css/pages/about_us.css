@@ -1,0 +1,306 @@
+
+:root {
+    --primary-color: #D94135;
+    --secondary-color: #FFFFFF;
+    --terc
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+  }
+  
+  .main-container {
+    overflow: hidden;
+  }
+  
+  .main-container,
+  .main-container * {
+    box-sizing: border-box;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    outline: 0;
+  }
+  
+  .main-container {
+    position: relative;
+    width: 1440px;
+    height: 2553px;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  .flex-row {
+    position: relative;
+    width: 1272px;
+    height: 78.69px;
+    margin: 42.207px 0 0 90px;
+    z-index: 32;
+  }
+  .logo {
+    position: absolute;
+    width: 101px;
+    height: 78.69px;
+    top: 0;
+    left: 0;
+    z-index: 32;
+    -webkit-mask-image: url(./static/img/backgrouds/logo.png);
+    -webkit-mask-size: cover;
+  }
+  .group {
+    position: absolute;
+    width: 100%;
+    height: 123.68%;
+    top: -1.45%;
+    left: 0;
+    z-index: 33;
+  }
+  .mask-group {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 34;
+    -webkit-mask-image: url(./static/img/backgrouds/);
+    -webkit-mask-image: url(./static/img/backgrouds/);
+    -webkit-mask-size: cover;
+  }
+  .group-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 35;
+  }
+  .group-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 36;
+  }
+  .rectangle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 37;
+  }
+  .regroup {
+    position: absolute;
+    width: 3.97%;
+    height: 100%;
+    top: 0;
+    left: 93%;
+    z-index: 24;
+  }
+  .vector {
+    position: absolute;
+    width: 30.1%;
+    height: 32.03%;
+    top: 37.67%;
+    left: 0;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 22;
+  }
+  .vector-3 {
+    position: absolute;
+    width: 50.5%;
+    height: 32.65%;
+    top: 38.9%;
+    left: 49.5%;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 24;
+  }
+  .rectangle-4 {
+    position: absolute;
+    width: 9.43%;
+    height: 53.37%;
+    top: 26.42%;
+    left: 78.3%;
+    background: #e3e1e1;
+    z-index: 28;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  .entrar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 80.79%;
+    top: 16.67%;
+    left: 41.67%;
+    color: rgba(217, 65, 53, 0.85);
+    font-family: Readex Pro, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 30;
+  }
+  .vector-5 {
+    position: absolute;
+    width: 22.5%;
+    height: 57.71%;
+    top: 16.67%;
+    left: 11.67%;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 29;
+  }
+  .home {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 54.21%;
+    top: 31.51%;
+    left: 28.46%;
+    color: #d94135;
+    font-family: Readex Pro, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 19;
+  }
+  .produtos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 43.12%;
+    top: 31.51%;
+    left: 37.81%;
+    color: #d94135;
+    font-family: Readex Pro, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 17;
+  }
+  .contato {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 43.12%;
+    top: 31.51%;
+    left: 49.29%;
+    color: #d94135;
+    font-family: Readex Pro, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 20;
+  }
+  .sobre-nos-6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 43.12%;
+    top: 31.51%;
+    left: 60.14%;
+    color: #d94135;
+    font-family: Readex Pro, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 18;
+  }
+  .vector-7 {
+    position: absolute;
+    width: 2.2%;
+    height: 34.5%;
+    top: 35.2%;
+    left: 97.8%;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 26;
+  }
+  .vector-8 {
+    position: relative;
+    width: 14.01px;
+    height: 13.104px;
+    margin: 6.787px 0 0 7px;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 25;
+  }
+  .vector-9 {
+    position: absolute;
+    width: 1.84%;
+    height: 30.58%;
+    top: 36.43%;
+    left: 73.9%;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 21;
+  }
+  .group-a {
+    position: absolute;
+    width: 1.89%;
+    height: 29.57%;
+    top: 38.9%;
+    left: 90.17%;
+    background: url(./static/img/backgrouds/)
+      no-repeat center;
+    background-size: 100% 100%;
+    z-index: 23;
+  }
+  .na-massas-parana {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 781px;
+    height: 182px;
+    margin: 165.103px 0 0 329px;
+    color: #d94135;
+    font-family: Readex Pro, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    z-index: 14;
+  }
+  .corpo {
+    position: relative;
+    width: 1438px;
+    height: 2036px;
+    margin: -1px 0 0 -25px;
+    overflow: hidden;
+  }
+  .flex-row-da {
+    position: relative;
+    width: 702px;
+    height: 430px;
+  }
