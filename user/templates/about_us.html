@@ -1,79 +1,53 @@
-{% load static %} 
+{%load static%}
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Nós</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;700&display=swap" />
-    <link rel="stylesheet" href="{% static 'css/about_us.css' %}" />
-  </head>
-  <body>
-    <div class="main-container">
-        {% include 'header.html' %}
-      <div class="flex-row">
-        <div class="logo">
-          <div class="group">
-            <div class="mask-group">
-              <div class="group-1">
-                <div class="group-2"><div class="rectangle"></div></div>
-              </div>
-            </div>
-          </div>
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sobre Nós</title>
+        <link>
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;700&display=swap"/
+        <link rel="stylesheet" href="user/static/css/pages/about_us.css" />
+</head>
+
+<body>
+        <div class="main-container">
+                <header class="header">
+                        <a href="#" class="logo">
+                                <img src="./assets/images/logo.png" alt="Logo Padaria Massas Paraná" />
+                        </a>
+                        <nav class="menu">
+                                <a href="home.html" class="menu-item">Home</a>
+                                <a href="produtos.html" class="menu-item">Produtos</a>
+                                <a href="contato.html" class="menu-item">Contato</a>
+                                <a href="sobre-nos.html" class="menu-item active">Sobre Nós</a>
+                                <button class="entrar">Entrar</button>
+                        </nav>
+                </header>
+
+                <main class="corpo">
+                        <section class="introducao">
+                                <p class="texto-introducao">
+                                        Na Massas Parana, cada pedaço é uma experiência única. Mergulhe no sabor e na tradição de nossos produtos artesanais, onde a paixão pela panificação transforma cada momento em algo inesquecível.
+                                </p>
+                        </section>
+
+                        <section class="sobre-nos">
+                                <div class="conteudo">
+                                        <img src="./assets/images/foto-padaria.jpg" alt="Foto da padaria" />
+                                        <p>
+                                        Desde a nossa fundação, nossa padaria tem sido um refúgio para os amantes de boas experiências gastronômicas. Com um compromisso inabalável com a qualidade e a autenticidade, criamos pães, bolos e doces que não apenas satisfazem, mas encantam.
+                                        </p>
+                                </div>
+                        </section>
+
+                        <section class="equipe">
+                                <p>
+                                Na Padaria Massas Paraná, acreditamos que a excelência no atendimento e a qualidade dos nossos produtos começam com a nossa equipe dedicada e talentosa. Com um time composto por 15 profissionais, cada um desempenha um papel fundamental na criação de uma experiência única para nossos clientes.
+                                </p>
+                        </section>
+                </main>
         </div>
-        <div class="regroup">
-          <div class="vector"></div>
-          <div class="vector-3"></div>
-        </div>
-        <div class="rectangle-4">
-          <span class="entrar">Entrar</span>
-          <div class="vector-5"></div>
-        </div>
-        <span class="home">Home</span><span class="produtos">Produtos</span
-        ><span class="contato">Contato</span
-        ><span class="sobre-nos-6">Sobre Nós</span>
-        <div class="vector-7"><div class="vector-8"></div></div>
-        <div class="vector-9"></div>
-        <div class="group-a"></div>
-      </div>
-      <span class="na-massas-parana"
-        >Na Massas Parana, cada pedaço é uma experiência única. Mergulhe no
-        sabor e na tradição de nossos produtos artesanais, onde a paixão pela
-        panificação transforma cada momento em algo inesquecível.</span
-      >
-      <div class="corpo">
-        <div class="flex-row-da">
-          <div class="image"></div>
-          <div class="frame"></div>
-        </div>
-        <div class="flex-row-b">
-          <div class="image-c"></div>
-          <span class="desde-nossa-fundacao"
-            >Desde a nossa fundação, nossa padaria tem sido um refúgio para os
-            amantes de boas experiências gastronômicas. Com um compromisso
-            inabalável com a qualidade e a autenticidade, criamos pães, bolos e
-            doces que não apenas satisfazem, mas encantam.</span
-          >
-          <div class="rectangle-d"></div>
-        </div>
-        <div class="flex-row-cb">
-          <div class="fotos"></div>
-          <span class="na-padaria-massas-parana"
-            >Na Padaria Massas Paraná, acreditamos que a excelência no
-            atendimento e a qualidade dos nossos produtos começam com a nossa
-            equipe dedicada e talentosa. Com um time composto por 15
-            profissionais, cada um desempenha um papel fundamental na criação de
-            uma experiência única para nossos clientes.</span
-          >
-          <div class="rectangle-e"></div>
-          <div class="fotos-f"></div>
-          <div class="img-wa"></div>
-          <div class="img-wa-10"></div>
-          <div class="screenshot"></div>
-        </div>
-      </div>
-      <div class="rectangle-11"></div>
-    </div>
- 
-  </body>
+</body>
 </html>
