@@ -1,950 +1,148 @@
-.produtos,
-.produtos * {
-  box-sizing: border-box;
+:root {
+  --primary-color: #d94135;
+  --secondary-color: #e3e1e1;
+  --font-family: 'Readex Pro', sans-serif;
 }
-.produtos {
-  background: #ffffff;
-  height: 2618px;
-  position: relative;
-  overflow: hidden;
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: #333;
+  background-color: #ffffff;
 }
-.rectangle-12 {
-  background: rgba(217, 217, 217, 0);
-  width: 1440px;
-  height: 177px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.rectangle-11 {
-  background: #d9d9d9;
-  width: 1440px;
-  height: 348px;
-  position: absolute;
-  left: 0px;
-  top: 138px;
-}
-._3-1-1 {
-  width: 1440px;
-  height: 348px;
-  position: absolute;
-  left: 0px;
-  top: 141px;
-  object-fit: cover;
-}
-.rectangle-13 {
-  background: #872818;
-  width: 1440px;
-  height: 92px;
-  position: absolute;
-  left: 0px;
-  top: 486px;
-}
-.rectangle-14 {
-  background: #c67e61;
-  width: 1440px;
-  height: 120px;
-  position: absolute;
-  left: 0px;
-  top: 578px;
-}
-.produtos2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Bold", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  position: absolute;
-  left: 604px;
-  top: 507px;
-}
-.group-2 {
-  position: absolute;
-  inset: 0;
-}
-.rectangle-15 {
-  background: #fdc82a;
-  border-radius: 30px;
-  width: 206px;
-  height: 53px;
-  position: absolute;
-  left: 93px;
-  top: 609px;
-}
-.rectangle-16 {
-  background: #fdc82a;
-  border-radius: 30px;
-  width: 206px;
-  height: 53px;
-  position: absolute;
-  left: 355px;
-  top: 611px;
-}
-.rectangle-17 {
-  background: #fdc82a;
-  border-radius: 30px;
-  width: 206px;
-  height: 53px;
-  position: absolute;
-  left: 617px;
-  top: 611px;
-}
-.rectangle-18 {
-  background: #fdc82a;
-  border-radius: 30px;
-  width: 206px;
-  height: 53px;
-  position: absolute;
-  left: 879px;
-  top: 609px;
-}
-.rectangle-19 {
-  background: #fdc82a;
-  border-radius: 30px;
-  width: 206px;
-  height: 53px;
-  position: absolute;
-  left: 1141px;
-  top: 611px;
-}
-.bolos {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 48px;
-  font-weight: 300;
-  position: absolute;
-  left: 79px;
-  top: 989px;
-  width: 438px;
-  height: 91px;
+
+.header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
+  padding: 20px 90px;
+  background-color: var(--secondary-color);
 }
-.rectangle-26 {
-  background: #ffffff;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 0px 0px 1px 0px;
-  width: 1191px;
-  height: 2px;
-  position: absolute;
-  left: 90px;
-  top: 2364px;
+
+.logo img {
+  width: 100px;
 }
-.rectangle-27 {
-  background: #f5f4f2;
-  width: 1188px;
-  height: 112px;
-  position: absolute;
-  left: 96px;
-  top: 2415px;
+
+.menu {
+  display: flex;
+  gap: 20px;
 }
-.logo {
-  height: auto;
-  position: absolute;
-  left: 29px;
-  top: 16.1px;
-  overflow: visible;
+
+.menu-item {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
 }
-.group-6 {
-  position: absolute;
-  inset: 0;
+
+.menu-item.active {
+  font-weight: bold;
 }
-.group-1 {
-  width: 910px;
-  height: 40.39px;
-  position: static;
-}
-.produtos3 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  position: absolute;
-  right: 49.38%;
-  left: 43.26%;
-  width: 7.36%;
-  bottom: 96.78%;
-  top: 1.99%;
-  height: 1.23%;
-}
-.sobre-n-s {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  position: absolute;
-  right: 28.54%;
-  left: 62.99%;
-  width: 8.47%;
-  bottom: 96.78%;
-  top: 1.99%;
-  height: 1.23%;
-}
-.home {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  position: absolute;
-  right: 60.14%;
-  left: 35%;
-  width: 4.86%;
-  bottom: 96.47%;
-  top: 1.99%;
-  height: 1.54%;
-}
-.contato {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  position: absolute;
-  right: 40.21%;
-  left: 53.4%;
-  width: 6.39%;
-  bottom: 96.78%;
-  top: 1.99%;
-  height: 1.23%;
-}
-.vector {
-  width: 1.63%;
-  height: 0.87%;
-  position: absolute;
-  right: 23.23%;
-  left: 75.14%;
-  bottom: 97%;
-  top: 2.13%;
-  overflow: visible;
-}
-.vector2 {
-  width: 1.06%;
-  height: 0.91%;
-  position: absolute;
-  right: 6.93%;
-  left: 92.01%;
-  bottom: 96.92%;
-  top: 2.16%;
-  overflow: visible;
-}
-.group {
-  width: 1.67%;
-  height: 0.84%;
-  position: absolute;
-  right: 8.82%;
-  left: 89.51%;
-  bottom: 96.96%;
-  top: 2.2%;
-  overflow: visible;
-}
-.vector3 {
-  width: 1.77%;
-  height: 0.93%;
-  position: absolute;
-  right: 4.48%;
-  left: 93.75%;
-  bottom: 96.87%;
-  top: 2.2%;
-  overflow: visible;
-}
-.vector4 {
-  width: 0.97%;
-  height: 0.47%;
-  position: absolute;
-  right: 2.29%;
-  left: 96.74%;
-  bottom: 97.19%;
-  top: 2.34%;
-  overflow: visible;
-}
-.vector5 {
-  width: 1.94%;
-  height: 0.98%;
-  position: absolute;
-  right: 1.81%;
-  left: 96.25%;
-  bottom: 96.92%;
-  top: 2.09%;
-  overflow: visible;
-}
-.group-3 {
-  width: 121px;
-  height: 39.77px;
-  position: static;
-}
-.rectangle-21 {
-  background: #e3e1e1;
-  border-radius: 20px;
-  width: 8.33%;
-  height: 1.52%;
-  position: absolute;
-  right: 12.64%;
-  left: 79.03%;
-  bottom: 96.64%;
-  top: 1.84%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.vector6 {
-  width: 1.88%;
-  height: 0.88%;
-  position: absolute;
-  right: 18.12%;
-  left: 80%;
-  bottom: 97.03%;
-  top: 2.1%;
-  overflow: visible;
-}
+
 .entrar {
-  color: rgba(217, 65, 53, 0.85);
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  position: absolute;
-  right: 12.57%;
-  left: 82.5%;
-  width: 4.93%;
-  bottom: 96.68%;
-  top: 2.1%;
-  height: 1.23%;
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  color: var(--primary-color);
+  cursor: pointer;
 }
-.group-7 {
-  position: absolute;
-  inset: 0;
-}
-.vector7 {
-  width: 1.63%;
-  height: 0.87%;
-  position: absolute;
-  right: 23.23%;
-  left: 75.14%;
-  bottom: 97%;
-  top: 2.13%;
-  overflow: visible;
-}
-.vector8 {
-  width: 1.06%;
-  height: 0.91%;
-  position: absolute;
-  right: 6.93%;
-  left: 92.01%;
-  bottom: 96.92%;
-  top: 2.16%;
-  overflow: visible;
-}
-.group2 {
-  width: 1.67%;
-  height: 0.84%;
-  position: absolute;
-  right: 8.82%;
-  left: 89.51%;
-  bottom: 96.96%;
-  top: 2.2%;
-  overflow: visible;
-}
-.vector9 {
-  width: 1.77%;
-  height: 0.93%;
-  position: absolute;
-  right: 4.48%;
-  left: 93.75%;
-  bottom: 96.87%;
-  top: 2.2%;
-  overflow: visible;
-}
-.vector10 {
-  width: 0.97%;
-  height: 0.47%;
-  position: absolute;
-  right: 2.29%;
-  left: 96.74%;
-  bottom: 97.19%;
-  top: 2.34%;
-  overflow: visible;
-}
-.vector11 {
-  width: 1.94%;
-  height: 0.98%;
-  position: absolute;
-  right: 1.81%;
-  left: 96.25%;
-  bottom: 96.92%;
-  top: 2.09%;
-  overflow: visible;
-}
-.vector12 {
-  width: 1.88%;
-  height: 0.88%;
-  position: absolute;
-  right: 18.12%;
-  left: 80%;
-  bottom: 97.03%;
-  top: 2.1%;
-  overflow: visible;
-}
-.bolo-fofo-tradicional {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Medium", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  position: absolute;
-  left: 339px;
-  top: 1159px;
-  width: 376px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.bolo-de-lim-o-com-cobertura-de-leite-de-coco {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Medium", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  position: absolute;
-  left: 339px;
-  top: 1409px;
-  width: 707px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.bolo-de-chocolate {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Medium", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  position: absolute;
-  left: 339px;
-  top: 1663px;
-  width: 376px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.bolo-de-morango-e-rom {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Medium", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  position: absolute;
-  left: 339px;
-  top: 1917px;
-  width: 376px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.bolo-de-anirves-rio-tradicional {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Medium", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  position: absolute;
-  left: 339px;
-  top: 2171px;
-  width: 498px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.rectangle-212 {
-  background: #ffffff;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 0px 0px 1px 0px;
-  width: 1191px;
-  height: 2px;
-  position: absolute;
-  left: 101px;
-  top: 1321px;
-}
-.rectangle-22 {
-  background: #ffffff;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 0px 0px 1px 0px;
-  width: 1191px;
-  height: 2px;
-  position: absolute;
-  left: 101px;
-  top: 1575px;
-}
-.rectangle-23 {
-  background: #ffffff;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 0px 0px 1px 0px;
-  width: 1191px;
-  height: 2px;
-  position: absolute;
-  left: 101px;
-  top: 1829px;
-}
-.rectangle-24 {
-  background: #ffffff;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 0px 0px 1px 0px;
-  width: 1191px;
-  height: 2px;
-  position: absolute;
-  left: 107px;
-  top: 2083px;
-}
-.clip-path-group {
-  height: auto;
-  position: absolute;
-  left: 93px;
-  top: 1129px;
-  overflow: visible;
-}
-.clip-path-group2 {
-  height: auto;
-  position: absolute;
-  left: 107px;
-  top: 1367px;
-  overflow: visible;
-}
-.group3 {
-  height: auto;
-  position: absolute;
-  left: 93px;
-  top: 1643px;
-  overflow: visible;
-}
-.clip-path-group3 {
-  height: auto;
-  position: absolute;
-  left: 107px;
-  top: 1869px;
-  overflow: visible;
-}
-.clip-path-group4 {
-  height: auto;
-  position: absolute;
-  left: 107px;
-  top: 2128px;
-  overflow: visible;
-}
-.bolos2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 25px;
-  font-weight: 300;
-  position: absolute;
-  left: 153px;
-  top: 622px;
-}
-.p-es {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 25px;
-  font-weight: 300;
-  position: absolute;
-  left: 427px;
-  top: 622px;
-}
-.salgados {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 25px;
-  font-weight: 300;
-  position: absolute;
-  left: 652px;
-  top: 623px;
-}
-.doces {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 25px;
-  font-weight: 300;
-  position: absolute;
-  left: 939px;
-  top: 622px;
-}
-.bebidas {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 25px;
-  font-weight: 300;
-  position: absolute;
-  left: 1189px;
-  top: 623px;
-}
-.botao-carrinho {
-  position: absolute;
-  inset: 0;
-}
-.rectangle-45 {
-  background: #d94135;
-  border-radius: 30px;
-  width: 17.99%;
-  height: 1.6%;
-  position: absolute;
-  right: 10.28%;
-  left: 71.74%;
-  bottom: 50.53%;
-  top: 47.86%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.encomendar-aogra {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 15.07%;
-  left: 76.6%;
-  width: 8.33%;
-  bottom: 51.07%;
-  top: 48.4%;
-  height: 0.53%;
-}
-.rectangle-452 {
-  background: #ffffff;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 1px;
-  width: 17.99%;
-  height: 1.6%;
-  position: absolute;
-  right: 30%;
-  left: 52.01%;
-  bottom: 50.53%;
-  top: 47.86%;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.adicionar-ao-carrinho {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 34.24%;
-  left: 56.18%;
-  width: 9.58%;
-  bottom: 51.07%;
-  top: 48.4%;
-  height: 0.53%;
-}
-.rectangle-453 {
-  background: #d94135;
-  border-radius: 30px;
-  width: 17.99%;
-  height: 42px;
-  position: absolute;
-  right: 10.28%;
-  left: 71.74%;
-  bottom: 1069px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.encomendar-agora {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 15.28%;
-  left: 76.81%;
-  width: 7.92%;
-  bottom: 1083px;
-  height: 14px;
-}
-.rectangle-454 {
-  background: #ffffff;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 1px;
-  width: 17.99%;
-  height: 42px;
-  position: absolute;
-  right: 30%;
-  left: 52.01%;
-  bottom: 1069px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.adicionar-ao-carrinho2 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 34.24%;
-  left: 56.18%;
-  width: 9.58%;
-  bottom: 1083px;
-  height: 14px;
-}
-.rectangle-455 {
-  background: #d94135;
-  border-radius: 30px;
-  width: 259px;
-  height: 42px;
-  position: absolute;
-  right: 148px;
-  bottom: 561px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.encomendar-agora2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 218px;
-  bottom: 575px;
-  width: 118px;
-  height: 14px;
-}
-.rectangle-456 {
-  background: #ffffff;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 1px;
-  width: 259px;
-  height: 42px;
-  position: absolute;
-  right: 432px;
-  bottom: 561px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.adicionar-ao-carrinho3 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 493px;
-  bottom: 575px;
-  width: 138px;
-  height: 14px;
-}
-.rectangle-457 {
-  background: #d94135;
-  border-radius: 30px;
-  width: 259px;
-  height: 42px;
-  position: absolute;
-  right: 148px;
-  bottom: 280px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.encomendar-agora3 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 218px;
-  bottom: 294px;
-  width: 118px;
-  height: 14px;
-}
-.rectangle-458 {
-  background: #ffffff;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 1px;
-  width: 259px;
-  height: 42px;
-  position: absolute;
-  right: 432px;
-  bottom: 280px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.adicionar-ao-carrinho4 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 493px;
-  bottom: 294px;
-  width: 138px;
-  height: 14px;
-}
-.rectangle-459 {
-  background: #d94135;
-  border-radius: 30px;
-  width: 17.99%;
-  height: 42px;
-  position: absolute;
-  right: 10.28%;
-  left: 71.74%;
-  bottom: 815px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.encomendar-agora4 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 15.28%;
-  left: 76.81%;
-  width: 7.92%;
-  bottom: 829px;
-  height: 14px;
-}
-.rectangle-4510 {
-  background: #ffffff;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: #d94135;
-  border-width: 1px;
-  width: 17.99%;
-  height: 42px;
-  position: absolute;
-  right: 30%;
-  left: 52.01%;
-  bottom: 815px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.adicionar-ao-carrinho5 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Regular", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  right: 34.24%;
-  left: 56.18%;
-  width: 9.58%;
-  bottom: 829px;
-  height: 14px;
-}
-.r-16-99 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  position: absolute;
-  right: 10.28%;
-  left: 83.82%;
-  width: 5.9%;
-  bottom: 56.91%;
-  top: 42.36%;
-  height: 0.73%;
-}
-.r-25-00 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  position: absolute;
-  right: 10.28%;
-  left: 83.82%;
-  width: 5.9%;
-  bottom: 47.4%;
-  top: 51.87%;
-  height: 0.73%;
-}
-.r-30-00 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  position: absolute;
-  right: 10.28%;
-  left: 83.82%;
-  width: 5.9%;
-  bottom: 37.7%;
-  top: 61.57%;
-  height: 0.73%;
-}
-.r-30-002 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  position: absolute;
-  right: 10.28%;
-  left: 83.82%;
-  width: 5.9%;
-  bottom: 28%;
-  top: 71.28%;
-  height: 0.73%;
-}
-.r-50-00 {
-  color: #d94135;
-  text-align: left;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  position: absolute;
-  right: 10.28%;
-  left: 83.82%;
-  width: 5.9%;
-  bottom: 18.3%;
-  top: 80.98%;
-  height: 0.73%;
-}
-.nossos-produtos-s-o-frecos-e-de-produ-o-di-ria-dessa-forma-s-aceitamos-encomendas-e-pedidos-para-buscar-em-nossa-loja-fisica {
-  color: #a39f9f;
+
+.produtos-header {
   text-align: center;
-  font-family: "ReadexPro-Light", sans-serif;
-  font-size: 25px;
-  font-weight: 300;
-  position: absolute;
-  left: 196px;
-  top: 2440px;
-  width: 985px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 40px 0;
 }
-.baners {
+
+.section-title {
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+.category-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.category-button {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  color: var(--primary-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 90px;
+}
+
+.product-item {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  width: 100%;
   height: auto;
-  position: absolute;
-  left: 88px;
-  top: 759px;
-  overflow: visible;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 20px;
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-to-cart,
+.order-now {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover,
+.order-now:hover {
+  background-color: #b53127;
+}
+
+.info {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #fff5f5;
+  border: 1px solid #ffc2c2;
+  border-radius: 12px;
+}
+
+.important-message {
+  font-size: 16px;
+  color: var(--primary-color);
 }
