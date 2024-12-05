@@ -1,0 +1,86 @@
+/* Header fixo no topo */
+.header {
+  position: fixed; /* Fixa o header no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  background-color: #ffffff; /* Cor de fundo */
+  z-index: 1000; /* Garante que o header esteja acima de outros elementos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ddd; /* Separador visual */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombras para destaque */
+  font-family:  'Readex Pro', sans-serif;
+}
+.logo {
+  width: 50px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px; /* Espaço entre os links */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #d94135;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.usuario {
+  color: #d94135;
+  font-weight: bold;
+}
+
+/* Compensar o espaço do header fixo */
+body {
+  padding-top: 70px; /* Compensa a altura do header fixo */
+}
+
+/* Layout Principal */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.menu-lateral {
+  width: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  transition: width 0.3s ease;
+}
+
+.menu-lateral.aberto {
+  width: 250px; /* Largura do menu ao abrir */
+}
+
+.conteudo {
+  flex: 1;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+
+.menu-lateral.aberto ~ .conteudo {
+  margin-left: 250px; /* Move o conteúdo para se adaptar ao menu */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-lateral {
+    position: fixed;
+    height: 100%;
+    z-index: 900; /* Menu deve ficar abaixo do header */
+  }
+}

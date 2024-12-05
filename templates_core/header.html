@@ -1,4 +1,5 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
 <header class="header">
     <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Logo" class="logo"></a>
     <nav class="nav">
@@ -6,6 +7,7 @@
         <a href="{% url 'produtos' %}">Produtos</a>
         <a href="{% url 'contact' %}">Contato</a>
         <a href="{% url 'about_us' %}">Sobre Nós</a>
+        <a href="{% url 'profile' %}">Olá, {{ user_name }} </a>
         <span class="usuario">Olá, {{ user_name }}</span>
     </nav>
 </header>

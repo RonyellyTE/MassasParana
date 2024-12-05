@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import View
 
-def home(request):
-    return HttpResponse("home")
+
+class HomeView(View):
+    def get(self, request):
+        return render(request, 'home.html', context={})
 
 def contact(request):
     return HttpResponse("contato")

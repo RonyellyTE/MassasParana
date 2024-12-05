@@ -1,0 +1,108 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-BR">
+{%include 'base.html'%}
+    <title>Massas Paraná</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;500;600;700&display=swap">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<body>
+    <div class="main-container">
+        {% include 'header.html' %}
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Com carinho e tradição,<br> fazemos o seu café perfeito todos os dias.</h1>
+            </div>
+        </section>
+
+        <section class="categories fade-in">
+            <div class="category">
+                <img src="{% static 'img/pao-fresco.png' %}" alt="Pães frescos">
+                <h2>PÃES</h2>
+            </div>
+            <div class="category">
+                <img src="{% static 'img/bolo-concept.png' %}" alt="Bolos deliciosos">
+                <h2>BOLOS</h2>
+            </div>
+            <div class="category">
+                <img src="{% static 'img/salgados.png' %}" alt="Salgados variados">
+                <h2>SALGADOS</h2>
+            </div>
+        </section>
+
+        <section class="surpreenda-se fade-in">
+            <div class="content">
+                <h2>Surpreenda-se</h2>
+                <button>Conheça</button>
+            </div>
+        </section>
+        
+        <section class="qualidade fade-in">
+            <div class="content">
+                <div class="qualidade-image">
+                    <img src="{% static 'img/pao-de-ontem.png' %}" alt="Compromisso com a qualidade">
+                </div>
+                <div class="qualidade-text">
+                    <h3>COMPROMISSO COM A QUALIDADE</h3>
+                    <h2>Fabricação própria com reposição diária</h2>
+                    <p>Dedicamos a proporcionar a você uma experiência única com produtos
+                        de panificação e confeitaria de altíssima qualidade.
+                        Nossos pães e doces são produzidos diariamente com ingredientes
+                        frescos; e priorizamos a excelência em cada detalhe, desde a seleção
+                        dos ingredientes até o atendimento ao cliente..</p>
+                    <button>Conheça mais</button>
+                </div>
+            </div>
+        </section>
+        <section class="love-cake fade-in">
+            <h2 class='love-text'>I LOVE</h2>
+            <div class="cake-gallery">
+                <div class="cake-item">
+                    <img src="{% static 'img/cake1.png' %}" alt="Chocolate Drip Cake">
+                </div>
+                <div class="cake-item">
+                    <img src="{% static 'img/cake2.png' %}" alt="Macarons Chocolate Cake">
+                </div>
+                <div class="cake-item">
+                    <img src="{% static 'img/cake3.png' %}" alt="Cupcakes with Sprinkles">
+                </div>
+            </div>
+            <h2 class='cake-text'>CAKE</h2>
+        </section>
+
+
+        <section class="experiencia fade-in">
+            <div class="content">
+                <h2>Uma experiência única</h2>
+                <p>Na Massas Paraná, unimos tradição e inovação para criar
+                    pães e doces que fazem toda a diferença no seu dia a dia.
+                    Nossos produtos são preparados com ingredientes
+                    selecionados, garantindo frescor e sabor incomparáveis.
+                    Visite-nos e descubra um espaço pensado para
+                    proporcionar a você momentos deliciosos e inesquecíveis!</p>
+                <button>Venha Visitar!</button>
+            </div>
+        </section>
+
+        <section class="junte-se fade-in">
+            <div class="content">
+                <h2>Venha fazer parte da nossa equipe</h2>
+                <p>Acreditamos que pessoas fazem a
+                    diferença! Venha fazer a diferença
+                    com a gente.</p>
+                <button>Junte-se a nós</button>
+            </div>
+            <div class="junte-se-image">
+                <img src="{% static 'img/conv-loja.png' %}" alt="Compromisso">
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Massas Paraná. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/scroll-animations.js' %}"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+/* Layout Principal */
 /* Geral */
 * {
   margin: 0;
@@ -26,44 +27,29 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  width: 50px;
-}
-
-.nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #d94135;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.usuario {
-  color: #d94135;
-  font-weight: bold;
-}
-
-/* Conteúdo */
-.content {
-  display: flex;
-  min-height: 100vh;
-}
-
 /* Menu Lateral */
 .menu-lateral {
   background-color: #fff;
   padding: 20px;
   width: 250px;
   border-right: 1px solid #ddd;
+  transition: width 0.3s ease;
+}
+
+.menu-lateral.recolhido {
+  width: 60px;
+  overflow: hidden;
 }
 
 .menu-lateral h2 {
   font-size: 18px;
   color: #d94135;
   margin-bottom: 20px;
+}
+
+.menu-lateral.recolhido h2,
+.menu-lateral.recolhido .navegacao {
+  display: none;
 }
 
 .navegacao {
@@ -116,27 +102,21 @@ body {
   display: block;
 }
 
-/* Seções de Informações */
-.informacoes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 20px;
-  margin-top: 20px;
-}
 
-.informacoes div {
+
+
+/* Botões */
+button {
+  padding: 10px 20px;
   font-size: 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.informacoes div strong {
-  color: #d94135;
-}
-
-/* Botões dentro das seções */
-.botoes {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
+button:focus {
+  outline: 2px solid #d94135;
 }
 
 .btn-editar,
@@ -168,4 +148,24 @@ body {
 .btn-salvar:hover {
   background-color: #d94135;
   color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-lateral {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 0;
+  }
+
+  .menu-lateral.aberto {
+    width: 250px;
+  }
+
+  .conteudo {
+    margin-left: 0;
+  }
 }

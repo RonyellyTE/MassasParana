@@ -132,6 +132,20 @@ class LogoutUserView(View):
         messages.success(request, "Você foi deslogado com sucesso.")
         return redirect('login')  # Redireciona para a página de login
 
+
 class ProductsView(View):
     def get(self, request):
         return render(request, 'products.html', context={})
+
+def editar_cliente(request):
+    if request.method == "POST":
+        cliente = Cliente.objects.get(id=request.user.id)
+        cliente.nome = request.POST["nome"]
+        cliente.email = request.POST["email"]
+        cliente.genero = request.POST.get("genero", "Não informado")
+        cliente.cpf = request.POST["cpf"]
+        cliente.data_nascimento = request.POST["data_nascimento"]
+        cliente.telefone = request.POST["telefone"]
+        cliente.save()
+        return redirect("perfil_usuario")
+

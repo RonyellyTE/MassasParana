@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/aside_bar.css' %}">
+<header>
+    <button id="toggle-menu" aria-label="Alternar Menu" aria-expanded="false">
+        ☰
+    </button>
+</header>
+<aside class="menu-lateral" aria-hidden="true">
+    <div class="menu-header">
+        <h2>Olá, {{ user_name }}!</h2>
+        <button id="close-menu" aria-label="Fechar Menu">
+            ×
+        </button>
+    </div>
+    <nav class="navegacao">
+        <button class="btn-navegacao" data-secao="dados-pessoais" aria-controls="dados-pessoais">
+            Dados Pessoais
+        </button>
+        <button class="btn-navegacao" data-secao="pedidos" aria-controls="pedidos">
+            Pedidos
+        </button>
+        <button class="btn-navegacao" data-secao="cartoes" aria-controls="cartoes">
+            Cartões
+        </button>
+        <a href="{% url 'logout' %}" class="btn-navegacao sair" role="button">Sair</a>
+    </nav>
+</aside>
+<script src="{% static 'js/aside_bar.js' %}"></script>

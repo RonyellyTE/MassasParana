@@ -1,48 +1,71 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%include 'base.html'%}
   <title>Perfil do Usuário</title>
   <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-</head>
+
 <body>
   <div class="container">
     {% include 'header.html' %}
+    {% include 'menu_lateral.html' %}
+    
+    <main class="conteudo">
+      <!-- Seção: Dados Pessoais -->
+      <section id="dados-pessoais" class="secao ativa" aria-labelledby="dados-pessoais-titulo">
+        <h2 id="dados-pessoais-titulo">Dados Pessoais</h2>
+        
+        <!-- Exibição de informações -->
+        <div id="info-visualizacao">
+          <div><strong>Nome:</strong> {{ cliente.nome }}</div>
+          <div><strong>Email:</strong> {{ cliente.email }}</div>
+          <div><strong>Gênero:</strong> {{ cliente.genero|default:"Não informado" }}</div>
+          <div><strong>CPF:</strong> {{ cliente.cpf|default:"-" }}</div>
+          <div><strong>Data de nascimento:</strong> {{ cliente.data_nascimento|date:"d/m/Y" }}</div>
+          <div><strong>Telefone:</strong> {{ cliente.telefone|default:"-" }}</div>
+        </div>
+        
+        <!-- Formulário de edição -->
+        <form id="form-edicao" style="display: none;" method="POST" action="{% url 'editar_cliente' %}">
+          {% csrf_token %}
+          <label>
+            Nome:
+            <input type="text" name="nome" value="{{ cliente.nome }}" required>
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" value="{{ cliente.email }}" required>
+          </label>
+          <label>
+            Gênero:
+            <select name="genero">
+              <option value="Masculino" {% if cliente.genero == "Masculino" %}selected{% endif %}>Masculino</option>
+              <option value="Feminino" {% if cliente.genero == "Feminino" %}selected{% endif %}>Feminino</option>
+              <option value="Outro" {% if cliente.genero == "Outro" %}selected{% endif %}>Outro</option>
+            </select>
+          </label>
+          <label>
+            CPF:
+            <input type="text" name="cpf" value="{{ cliente.cpf }}">
+          </label>
+          <label>
+            Data de nascimento:
+            <input type="date" name="data_nascimento" value="{{ cliente.data_nascimento|date:"Y-m-d" }}">
+          </label>
+          <label>
+            Telefone:
+            <input type="tel" name="telefone" value="{{ cliente.telefone }}">
+          </label>
+          <button type="submit">Salvar</button>
+        </form>
 
-    <div class="content">
-      <aside class="menu-lateral">
-        <h2>Olá, {{ user_name }}!</h2>
-        <nav class="navegacao">
-          <button class="btn-navegacao" onclick="mostrarSecao('dados-pessoais')">Dados Pessoais</button>
-          <button class="btn-navegacao" onclick="mostrarSecao('pedidos')">Pedidos</button>
-          <button class="btn-navegacao" onclick="mostrarSecao('cartoes')">Cartões</button>
-          <a href="{% url 'logout' %}" class="btn-navegacao sair">Sair</a>
-        </nav>
-      </aside>
-
-      <main class="conteudo">
-        <!-- Seção: Dados Pessoais -->
-        <section id="dados-pessoais" class="secao ativa">
-          <h2>Dados Pessoais</h2>
-          <div class="informacoes">
-            <div><strong>Nome:</strong> {{ cliente.nome }}</div>
-            <div><strong>Email:</strong> {{ cliente.email }}</div>
-            <div><strong>Gênero:</strong> {{ cliente.genero|default:"Não informado" }}</div>
-            <div><strong>CPF:</strong> {{ cliente.cpf|default:"-" }}</div>
-            <div><strong>Data de nascimento:</strong> {{ cliente.data_nascimento|date:"d/m/Y" }}</div>
-            <div><strong>Telefone:</strong> {{ cliente.telefone|default:"-" }}</div>
-          </div>
-          <div class="botoes">
-            <button class="btn-editar">Editar</button>
-            <button class="btn-salvar">Salvar e Continuar</button>
-          </div>
-        </section>
-
-        <!-- Outras seções omitidas por brevidade -->
-      </main>
-    </div>
+        <!-- Botões -->
+        <div class="botoes">
+          <button class="btn-editar" id="btn-editar">Editar</button>
+          <button class="btn-cancelar" id="btn-cancelar" style="display: none;">Cancelar</button>
+        </div>
+      </section>
+    </main>
   </div>
   <script src="{% static 'js/profile.js' %}"></script>
 </body>
