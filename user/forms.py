@@ -1,4 +1,5 @@
 from django import forms
+from .models import Cliente
 
 class RegisterForm(forms.Form):
     nome = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
@@ -23,3 +24,12 @@ class LoginForm(forms.Form):
         'class': 'form__field',
         'placeholder': 'Senha'
     }))
+
+
+class ClienteEditForm(forms.ModelForm):
+    class Meta:
+        model = Cliente
+        fields = ['nome', 'email', 'genero', 'cpf', 'data_nascimento', 'telefone']
+        widgets = {
+            'data_nascimento': forms.DateInput(attrs={'type': 'date'}),
+        }

@@ -10,7 +10,9 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, ClienteEditForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import UpdateView
 from django.shortcuts import render
 from .models import Cliente
 
@@ -19,7 +21,6 @@ logger = logging.getLogger(__name__)
 class IndexView(View):
     def get(self, request):
         return render(request, 'index.html', context={})
-
 
 
 class LoginView(FormView):
@@ -137,15 +138,35 @@ class ProductsView(View):
     def get(self, request):
         return render(request, 'products.html', context={})
 
-def editar_cliente(request):
-    if request.method == "POST":
-        cliente = Cliente.objects.get(id=request.user.id)
-        cliente.nome = request.POST["nome"]
-        cliente.email = request.POST["email"]
-        cliente.genero = request.POST.get("genero", "Não informado")
-        cliente.cpf = request.POST["cpf"]
-        cliente.data_nascimento = request.POST["data_nascimento"]
-        cliente.telefone = request.POST["telefone"]
-        cliente.save()
-        return redirect("perfil_usuario")
+class EditarPerfilView(LoginRequiredMixin, UpdateView):
+    model = Cliente
+    form_class = ClienteEditForm
+    template_name = "editar_cliente.html"  # Template para a edição
+    success_url = reverse_lazy("perfil_usuario")  # Redirecionamento após sucesso
+
+    def get_object(self, queryset=None):
+        """
+        Sobrescreve o método get_object para garantir que o cliente que está editando seja o correto,
+        com base nas informações da sessão (id do cliente).
+        """
+        cliente_id = self.request.session.get('cliente_id')
+        if not cliente_id:
+            # Se o id do cliente não estiver na sessão, redireciona para a página de login
+            messages.error(self.request, "Você precisa estar logado para acessar esta página.")
+            return redirect('login')  # Redireciona para o login se a sessão não for válida
+        return get_object_or_404(Cliente, id=cliente_id)
+
+    def form_valid(self, form):
+        """
+        Sobrescreve o método form_valid para exibir uma mensagem de sucesso.
+        """
+        messages.success(self.request, "Perfil atualizado com sucesso!")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        """
+        Sobrescreve o método form_invalid para exibir uma mensagem de erro.
+        """
+        messages.error(self.request, "Erro ao atualizar o perfil. Verifique os dados e tente novamente.")
+        return super().form_invalid(form)
 

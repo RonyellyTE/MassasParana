@@ -61,6 +61,7 @@
                 <a href="{% url 'password_reset' %}" class="forgot-password">Esqueci minha senha</a>
                 
                 <!-- Botão de Login -->
+                <input type="hidden" name="next" value="{{ request.GET.next }}" />
                 <button type="submit" class="submit-btn">Entrar</button>
             </form>
             

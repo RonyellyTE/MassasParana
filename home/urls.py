@@ -19,13 +19,13 @@ Descrição: Define o mapeamento de URLs para views. É aqui que você configura
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
-from .views import HomeView, contact, about_us
+from .views import HomeView, contact, AboutUsView
 
 
 
 
 urlpatterns = [
     path('home/', HomeView.as_view(), name='home'),
-    path('sobre_nos/', about_us, name='about_us'),
+    path('sobre_nos/', AboutUsView.as_view(), name='about_us'),
     path('contato/', contact, name='contact'),
 ]

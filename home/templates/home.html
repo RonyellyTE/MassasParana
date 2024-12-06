@@ -1,21 +1,29 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
-{%include 'base.html'%}
+
+{% include 'base.html' %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massas Paraná</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;500;600;700&display=swap">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
 
 <body>
     <div class="main-container">
         {% include 'header.html' %}
         
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <h1>Com carinho e tradição,<br> fazemos o seu café perfeito todos os dias.</h1>
             </div>
         </section>
 
+        <!-- Categories Section -->
         <section class="categories fade-in">
             <div class="category">
                 <img src="{% static 'img/pao-fresco.png' %}" alt="Pães frescos">
@@ -31,13 +39,15 @@
             </div>
         </section>
 
+        <!-- Surpreenda-se Section -->
         <section class="surpreenda-se fade-in">
             <div class="content">
                 <h2>Surpreenda-se</h2>
-                <button>Conheça</button>
+                <button onclick="window.location.href='{% url 'about_us' %}'">Conheça</button>
             </div>
         </section>
-        
+
+        <!-- Qualidade Section -->
         <section class="qualidade fade-in">
             <div class="content">
                 <div class="qualidade-image">
@@ -50,11 +60,13 @@
                         de panificação e confeitaria de altíssima qualidade.
                         Nossos pães e doces são produzidos diariamente com ingredientes
                         frescos; e priorizamos a excelência em cada detalhe, desde a seleção
-                        dos ingredientes até o atendimento ao cliente..</p>
-                    <button>Conheça mais</button>
+                        dos ingredientes até o atendimento ao cliente.</p>
+                    <button onclick="window.location.href='{% url 'about_us' %}'">Conheça mais</button>
                 </div>
             </div>
         </section>
+
+        <!-- Love Cake Section -->
         <section class="love-cake fade-in">
             <h2 class='love-text'>I LOVE</h2>
             <div class="cake-gallery">
@@ -71,7 +83,7 @@
             <h2 class='cake-text'>CAKE</h2>
         </section>
 
-
+        <!-- Experiência Section -->
         <section class="experiencia fade-in">
             <div class="content">
                 <h2>Uma experiência única</h2>
@@ -81,23 +93,25 @@
                     selecionados, garantindo frescor e sabor incomparáveis.
                     Visite-nos e descubra um espaço pensado para
                     proporcionar a você momentos deliciosos e inesquecíveis!</p>
-                <button>Venha Visitar!</button>
+                <button onclick="window.location.href='{% url 'about_us' %}'">Venha Visitar!</button>
             </div>
         </section>
 
+        <!-- Junte-se Section -->
         <section class="junte-se fade-in">
             <div class="content">
                 <h2>Venha fazer parte da nossa equipe</h2>
                 <p>Acreditamos que pessoas fazem a
                     diferença! Venha fazer a diferença
                     com a gente.</p>
-                <button>Junte-se a nós</button>
+                <button onclick="window.location.href='{% url 'contact' %}'">Junte-se a nós</button>
             </div>
             <div class="junte-se-image">
                 <img src="{% static 'img/conv-loja.png' %}" alt="Compromisso">
             </div>
         </section>
 
+        <!-- Footer -->
         <footer>
             <p>&copy; 2024 Massas Paraná. Todos os direitos reservados.</p>
         </footer>
@@ -105,4 +119,5 @@
 
     <script src="{% static 'js/scroll-animations.js' %}"></script>
 </body>
+
 </html>

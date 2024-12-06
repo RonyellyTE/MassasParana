@@ -50,7 +50,7 @@
           </label>
           <label>
             Data de nascimento:
-            <input type="date" name="data_nascimento" value="{{ cliente.data_nascimento|date:"Y-m-d" }}">
+            <input type="date" name="data_nascimento" value="{{ cliente.data_nascimento|date:'Y-m-d' }}">
           </label>
           <label>
             Telefone:
@@ -58,7 +58,7 @@
           </label>
           <button type="submit">Salvar</button>
         </form>
-
+        
         <!-- Botões -->
         <div class="botoes">
           <button class="btn-editar" id="btn-editar">Editar</button>

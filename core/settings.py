@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+LOGIN_URL = '/user/login/'
 # Application definition
 
 INSTALLED_APPS = [
@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'user.context_processors.user_context',
             ],
         },
     },
@@ -86,7 +87,7 @@ DATABASES = {
         'USER': 'ronyelly',
         'PASSWORD': '22111511',
         'HOST': 'localhost',
-        'PORT': '49153',
+        'PORT': '5432',
     }
 }
 

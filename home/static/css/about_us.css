@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #d94135;
+    --secondary-color: #e3e1e1;
+    --font-family: 'Readex Pro', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: #ffffff;
+    color: #333;
+  }
+  
+  .main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    background-color: var(--secondary-color);
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  .menu-item.active {
+    font-weight: 700;
+  }
+  
+  .entrar {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    font-size: 20px;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .corpo {
+    padding: 40px 90px;
+  }
+  
+  .introducao {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .texto-introducao {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .sobre-nos, .equipe {
+    margin-bottom: 40px;
+  }
+  
+  .sobre-nos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+  }

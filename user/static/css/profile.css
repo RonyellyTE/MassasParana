@@ -15,6 +15,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -33,23 +34,13 @@ body {
   padding: 20px;
   width: 250px;
   border-right: 1px solid #ddd;
-  transition: width 0.3s ease;
-}
-
-.menu-lateral.recolhido {
-  width: 60px;
-  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .menu-lateral h2 {
   font-size: 18px;
   color: #d94135;
   margin-bottom: 20px;
-}
-
-.menu-lateral.recolhido h2,
-.menu-lateral.recolhido .navegacao {
-  display: none;
 }
 
 .navegacao {
@@ -94,18 +85,6 @@ body {
   padding: 30px;
 }
 
-.secao {
-  display: none;
-}
-
-.secao.ativa {
-  display: block;
-}
-
-
-
-
-/* Botões */
 button {
   padding: 10px 20px;
   font-size: 16px;
@@ -117,16 +96,6 @@ button {
 
 button:focus {
   outline: 2px solid #d94135;
-}
-
-.btn-editar,
-.btn-salvar {
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .btn-editar {
@@ -150,22 +119,47 @@ button:focus {
   color: white;
 }
 
+/* Botão de Toggle do Menu */
+.menu-lateral-toggle {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #d94135;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  z-index: 2000;
+  cursor: pointer;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
+  .menu-lateral-toggle {
+    display: block;
+  }
+
   .menu-lateral {
     position: fixed;
     height: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 0;
+    transform: translateX(-100%);
   }
 
   .menu-lateral.aberto {
-    width: 250px;
+    transform: translateX(0);
   }
 
   .conteudo {
+    padding: 15px;
     margin-left: 0;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 15px;
   }
 }

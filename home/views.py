@@ -10,5 +10,6 @@ class HomeView(View):
 def contact(request):
     return HttpResponse("contato")
 
-def about_us(request):
-    return HttpResponse("sobre_nos")
+class AboutUsView(View):
+    def get(self, request):
+        return render(request, 'about_us.html', context={})
