@@ -96,6 +96,11 @@ section {
   border-radius: 10px;
 }
 
+.content {
+  display: flex;
+  gap:2rem;
+}
+
 .surpreenda-se h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -163,7 +168,6 @@ section {
 /* Qualidade Section */
 .qualidade {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: var(--qualidade-bg);
@@ -172,7 +176,7 @@ section {
   gap: 2rem;
 }
 
-.qualidade-image img {
+.qualidade-image {
   max-width: 100%;
   width: 400px;
   height: auto;
