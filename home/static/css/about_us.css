@@ -1,81 +1,174 @@
 :root {
-    --primary-color: #d94135;
-    --secondary-color: #e3e1e1;
-    --font-family: 'Readex Pro', sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    font-family: var(--font-family);
-    background: #ffffff;
-    color: #333;
-  }
-  
-  .main-container {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 90px;
-    background-color: var(--secondary-color);
-  }
-  
-  .logo img {
-    width: 100px;
-  }
-  
-  .menu {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menu-item {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 24px;
-    font-weight: 300;
-  }
-  
-  .menu-item.active {
-    font-weight: 700;
-  }
-  
-  .entrar {
-    padding: 10px 20px;
-    background-color: var(--secondary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 20px;
-    font-size: 20px;
-    color: var(--primary-color);
-    cursor: pointer;
-  }
-  
-  .corpo {
-    padding: 40px 90px;
-  }
-  
-  .introducao {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .texto-introducao {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color);
-  }
-  
-  .sobre-nos, .equipe {
-    margin-bottom: 40px;
-  }
-  
-  .sobre-nos img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-  }
+  --primary-color: #d94135;
+  --secondary-color: #f6f6f6;
+  --font-family: 'Readex Pro', sans-serif;
+  --introducao-bg: linear-gradient(to right, #707070);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: #ffffff;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid #ddd;
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.menu-item.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.entrar {
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  font-size: 16px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+.introducao {
+  background: var(--introducao-bg); /* Fundo similar ao hero, com cor padrão definida */
+  color: #D94135; /* Cor do texto em branco */
+  padding: 12rem 3rem;/* Espaçamento interno amplo para criar um efeito hero */
+  text-align: center; /* Centraliza o texto */
+}
+
+.texto-introducao {
+  font-size: 2.5rem; /* Ajusta o tamanho da fonte para destaque */
+  line-height: 1.6; /* Define o espaçamento entre linhas */
+  font-weight: 700; /* Texto em negrito */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
+}
+
+
+.sobre-nos .conteudo {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Aumenta o espaço entre imagens e texto */
+}
+
+.imagem-pao, .imagem-trigo {
+  max-width: 120px;
+  height: auto;
+}
+
+.texto-sobre {
+  flex: 1;
+  font-size: 18px; /* Tamanho maior para destacar o texto */
+  color: #333;
+  line-height: 1.8; /* Melhor espaçamento entre linhas */
+}
+.equipe {
+  display: flex; /* Ativa o Flexbox */
+  flex-direction: row-reverse; /* Move a imagem para o lado direito */
+  align-items: center; /* Alinha o texto verticalmente ao centro da imagem */
+  gap: 30px; /* Espaço entre o texto e a imagem */
+  margin-bottom: 40px; /* Espaço inferior */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.texto-equipe {
+  font-size: 18px; /* Define o tamanho do texto */
+  color: var(--primary-color); /* Define a cor principal */
+  line-height: 1.8; /* Espaçamento entre linhas */
+  margin: 0; /* Remove margens adicionais */
+  position: relative; /* Necessário para posicionar a linha */
+  padding-bottom: 10px; /* Espaçamento para a linha */
+  flex: 1; /* Garante que o texto use o espaço disponível */
+}
+
+.texto-equipe::after {
+  content: ''; /* Cria a linha */
+  position: absolute; /* Posiciona em relação ao texto */
+  bottom: 0; /* Posiciona a linha na parte inferior do texto */
+  left: 0; /* Alinha ao lado esquerdo do texto */
+  width: 50%; /* Define a linha como metade da largura */
+  height: 2px; /* Espessura da linha */
+  background-color: var(--primary-color); /* Cor da linha */
+}
+
+.equipe img {
+  max-width: 250px; /* Define o tamanho máximo da imagem */
+  height: auto; /* Mantém a proporção */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  align-self: center; /* Centraliza a imagem verticalmente com o texto */
+  margin-left: 0; /* Remove deslocamento à esquerda */
+  margin-right: 10px; /* Espaço entre texto e imagem */
+}
+
+
+.imagens-diversas .galeria {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Ajusta o espaço entre as imagens */
+  margin-bottom: 20px;
+}
+
+.galeria img {
+  max-width: 45%; /* Aumenta o tamanho das imagens */
+  height: auto; /* Mantém a proporção */
+}
+.imagem-bolo {
+  display: block;
+  max-width: 180px; /* Ajusta o tamanho para ficar mais harmonioso */
+  margin: 20px auto; /* Centraliza a imagem e adiciona margem acima e abaixo */
+}
+.imagem-pao {
+  max-width: 300px; /* Aumenta o tamanho da imagem */
+  height: auto; /* Mantém as proporções */
+  margin-right: auto; /* Garante alinhamento à esquerda */
+   /* Altera a ordem para que a imagem fique à esquerda */
+}
+
+.texto-sobre-pao {
+  flex: 1;
+  font-size: 18px; /* Ajusta o tamanho do texto */
+  color: var(--primary-color); /* Define a cor principal do texto */
+  line-height: 1.8; /* Ajusta espaçamento entre linhas */
+  text-align: left; /* Alinha o texto à esquerda */
+  position: relative; /* Torna o elemento pai posicionável */
+  padding-bottom: 10px; /* Dá espaço para a linha */
+}
+
+.texto-sobre-pao::after {
+  content: ''; /* Cria o elemento visual para a linha */
+  position: absolute;
+  bottom: 0; /* Posiciona a linha no final do texto */
+  left: 0; /* Começa no lado esquerdo */
+  width: 50%; /* Define a largura da linha como metade */
+  height: 2px; /* Espessura da linha */
+  background-color: var(--primary-color); /* Cor da linha */
+}
