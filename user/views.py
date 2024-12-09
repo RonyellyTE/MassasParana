@@ -20,7 +20,8 @@ logger = logging.getLogger(__name__)
 
 class IndexView(View):
     def get(self, request):
-        return render(request, 'index.html', context={})
+        redirect_url = reverse_lazy('profile')
+        return redirect(redirect_url)
 
 
 class LoginView(FormView):

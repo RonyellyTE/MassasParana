@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massas Paraná</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;500;600;700&display=swap">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 
@@ -50,7 +51,7 @@
         <!-- Qualidade Section -->
         <section class="qualidade fade-in">
             <div class="content">
-                <img src="{% static 'img/ratão.jpg' %}" class="qualidade-image" alt="Compromisso com a qualidade">
+                <img src="{% static 'img/pao-de-ontem.png' %}" class="qualidade-image" alt="Compromisso com a qualidade">
 
                 <div class="qualidade-text">
                     <h3>COMPROMISSO COM A QUALIDADE</h3>
@@ -85,7 +86,7 @@
         <!-- Experiência Section -->
         <section class="experiencia fade-in">
             <div class="content">
-                <h2>Uma experiência única</h2>
+                <div class='experiencia-text'><h2>Uma experiência única</h2>
                 <p>Na Massas Paraná, unimos tradição e inovação para criar
                     pães e doces que fazem toda a diferença no seu dia a dia.
                     Nossos produtos são preparados com ingredientes
@@ -93,17 +94,20 @@
                     Visite-nos e descubra um espaço pensado para
                     proporcionar a você momentos deliciosos e inesquecíveis!</p>
                 <button onclick="window.location.href='{% url 'about_us' %}'">Venha Visitar!</button>
+                </div>
             </div>
         </section>
 
         <!-- Junte-se Section -->
         <section class="junte-se fade-in">
             <div class="content">
-                <h2>Venha fazer parte da nossa equipe</h2>
-                <p>Acreditamos que pessoas fazem a
-                    diferença! Venha fazer a diferença
-                    com a gente.</p>
-                <button onclick="window.location.href='{% url 'contact' %}'">Junte-se a nós</button>
+                <div class='junte-se-text'>
+                    <h2>Venha fazer parte da nossa equipe</h2>
+                    <p>Acreditamos que pessoas fazem a
+                        diferença! Venha fazer a diferença
+                        com a gente.</p>
+                    <button onclick="window.location.href='{% url 'contact' %}'">Junte-se a nós</button>
+                </div>
             </div>
             <div class="junte-se-image">
                 <img src="{% static 'img/conv-loja.png' %}" alt="Compromisso">

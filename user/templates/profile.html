@@ -3,12 +3,13 @@
 <html lang="pt-br">
   {%include 'base.html'%}
   <title>Perfil do Usuário</title>
-  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+  <link rel="stylesheet" href="{% static 'css/pages/profile.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
 <body>
   <div class="container">
     {% include 'header.html' %}
-    {% include 'menu_lateral.html' %}
+    {% include 'aside_bar_profile.html' %}
     
     <main class="conteudo">
       <!-- Seção: Dados Pessoais -->

@@ -1,0 +1,36 @@
+/* base.css */
+
+/* Garantir que não há overflow horizontal */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Remove o scroll horizontal */
+}
+
+/* Configuração padrão para todos os elementos */
+* {
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões do elemento */
+}
+
+/* Reset de cabeçalhos e parágrafos (opcional) */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links padrão */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Correção específica para o header */
+.header {
+    width: 100%;
+    overflow: hidden; /* Evita que o conteúdo extrapole */
+}
+
+/* Correção específica para o menu lateral */
+.menu-lateral {
+    left: -250px; /* Ajusta para que não cause overflow */
+}

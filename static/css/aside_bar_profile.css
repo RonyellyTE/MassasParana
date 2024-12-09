@@ -1,0 +1,149 @@
+    /* Reset Básico */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #fff;
+    }
+
+    /* Estilo do Header */
+    header {
+        background-color: none;
+        color: #d94135; /* Vermelho */
+        height: 60px; /* Mesma altura do botão */
+        width: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0 20px; /* Somente espaçamento lateral */
+    }    
+
+    header button {
+        background: #d94135;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; /* Transforma em uma bolinha */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    header button:hover {
+        background-color: #b53027; /* Vermelho mais escuro */
+        transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    }
+
+    /* Menu Lateral */
+    .menu-lateral {
+        position: fixed;
+        top: 0;
+        left: 0; /* Mantém a posição inicial no lado esquerdo */
+        width: 320px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        transform: translateX(-100%); /* Esconde o menu fora da tela */
+        transition: transform 0.3s ease; /* Animação suave */
+        z-index: 1000;
+    }
+    
+    .menu-lateral[aria-hidden="false"] {
+        transform: translateX(0); /* Traz o menu de volta */
+    }
+    
+
+    /* Cabeçalho do Menu */
+    .menu-header {
+        background-color: #fff;
+        color: #d94135;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-header h2 {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    .menu-header button {
+        background: #d94135;
+        border: none;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%; /* Transforma em uma bolinha */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .menu-header button:hover {
+        background-color: #b53027;
+        transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    }
+
+    /* Navegação do Menu */
+    .navegacao {
+        padding: 20px;
+    }
+
+    .btn-navegacao {
+        display: block;
+        width: 100%;
+        background-color: #fff; /* Branco */
+        color: #d94135; /* Vermelho */
+        text-align: left;
+        font-size: 18px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        border: 2px solid #d94135;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-navegacao:hover {
+        background-color: #d94135;
+        color: white;
+    }
+
+    .btn-navegacao.sair {
+        background-color: #fff;
+        color: #d94135;
+        border: 2px solid #d94135;
+    }
+
+    .btn-navegacao.sair:hover {
+        background-color: #d94135;
+        color: white;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .menu-lateral {
+            width: 100%; /* O menu ocupa a tela inteira em dispositivos pequenos */
+        }
+
+        .menu-header h2 {
+            font-size: 18px;
+        }
+
+        .btn-navegacao {
+            font-size: 16px;
+        }
+    }

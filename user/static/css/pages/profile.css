@@ -1,0 +1,157 @@
+/* Path: static/css/profile.css */
+
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content */
+main.conteudo {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title */
+h2 {
+  color: #d32f2f;
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+/* Information display */
+#info-visualizacao div {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+#info-visualizacao strong {
+  color: #d32f2f;
+}
+
+/* Form styles */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus {
+  border-color: #d32f2f;
+  outline: none;
+}
+
+form button[type="submit"] {
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.botoes {
+  margin-top: 20px;
+}
+
+.botoes button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-editar {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.btn-editar:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+.btn-cancelar {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn-cancelar:hover {
+  background-color: #bbb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main.conteudo {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  form input, form select {
+    font-size: 0.9rem;
+  }
+
+  .botoes button {
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .botoes {
+    display: flex;
+    flex-direction: column;
+  }
+}

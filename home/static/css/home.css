@@ -41,6 +41,7 @@ section {
 
 .hero h1 {
   font-size: 3.5rem;
+  text-align: center;
   line-height: 1.4;
   font-weight: 700;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -215,6 +216,26 @@ section {
 .qualidade-text button:hover {
   background: #b63529;
 }
+.experiencia {
+  background-color: var(--experiencia-bg);
+}
+
+.experiencia-text {
+  flex: 1;
+  text-align: center; /* Alinha todo o texto dentro dessa classe ao centro */
+}
+
+.experiencia-text h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.experiencia-text p {
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
 
 /* Junte-se Section */
 .junte-se {
@@ -225,6 +246,22 @@ section {
   background-color: var(--junte-se-bg);
   padding: 4rem 2rem;
   gap: 2rem;
+}
+.junte-se-text {
+  flex: 1;
+  text-align: left;
+}
+
+.junte-se-text h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.junte-se-text p {
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
 }
 
 .junte-se-image img {

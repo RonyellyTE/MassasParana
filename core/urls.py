@@ -18,7 +18,6 @@ Descrição: Define o mapeamento de URLs para views. É aqui que você configura
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
 
 
 
@@ -26,6 +25,6 @@ from django.http import HttpResponse
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('', include('products.urls')),
+    path('products/', include('products.urls')),
     path('user/', include('user.urls'))
 ]

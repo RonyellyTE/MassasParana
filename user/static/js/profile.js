@@ -1,37 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleMenuButton = document.getElementById('toggle-menu');
-  const closeMenuButton = document.getElementById('close-menu');
-  const menuLateral = document.querySelector('.menu-lateral');
+// navigation_profile.js
 
-  // Abre ou fecha o menu
-  const toggleMenu = () => {
-    const isOpen = menuLateral.classList.toggle('aberto');
-    toggleMenuButton.setAttribute('aria-expanded', isOpen);
-  };
-
-  // Adiciona eventos aos botões
-  toggleMenuButton.addEventListener('click', toggleMenu);
-  closeMenuButton.addEventListener('click', toggleMenu);
-});
 document.addEventListener("DOMContentLoaded", () => {
-  const btnEditar = document.getElementById("btn-editar");
-  const btnCancelar = document.getElementById("btn-cancelar");
-  const infoVisualizacao = document.getElementById("info-visualizacao");
-  const formEdicao = document.getElementById("form-edicao");
+  const navigationButtons = document.querySelectorAll(".btn-navegacao");
+  const toggleMenuButton = document.getElementById("toggle-menu");
+  const asideMenu = document.querySelector(".menu-lateral");
 
-  btnEditar.addEventListener("click", () => {
-    // Alterna para o modo de edição
-    infoVisualizacao.style.display = "none";
-    formEdicao.style.display = "block";
-    btnEditar.style.display = "none";
-    btnCancelar.style.display = "inline-block";
-  });
+  // Adicionar interação nos botões de navegação
+  navigationButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          const sectionId = button.getAttribute("data-secao");
+          const section = document.getElementById(sectionId);
 
-  btnCancelar.addEventListener("click", () => {
-    // Alterna para o modo de visualização
-    infoVisualizacao.style.display = "block";
-    formEdicao.style.display = "none";
-    btnEditar.style.display = "inline-block";
-    btnCancelar.style.display = "none";
+          // Seções podem ser manipuladas aqui (exemplo: scroll ou exibir conteúdo específico)
+          if (section) {
+              section.scrollIntoView({ behavior: "smooth" });
+          }
+
+          // Opcional: fechar o menu após selecionar
+          asideMenu.setAttribute("aria-hidden", "true");
+          toggleMenuButton.setAttribute("aria-expanded", "false");
+      });
   });
 });

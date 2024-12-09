@@ -1,0 +1,152 @@
+/* Estilo base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+    max-height: 50px;
+    cursor: pointer;
+}
+
+
+/* Menu desktop */
+.desktop-menu {
+    display: block; /* Garante que o menu é visível */
+}
+
+.desktop-menu .menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Garante que os itens fiquem em linha */
+    flex-direction: row; /* Alinhamento horizontal */
+    gap: 20px; /* Espaçamento entre os links */
+    justify-content: flex-end; /* Alinha os links à direita */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.desktop-menu .menu-links li {
+    display: inline-block;     /* Garante que cada item fique em linha */
+}
+
+/* Botão Toggle */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #d94135;
+    display: none; /* Apenas em dispositivos menores */
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #b53027;
+}
+
+/* Menu móvel */
+.mobile-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    transition: top 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile-menu.open {
+    top: 60px;
+}
+
+/* Botão de fechar no menu móvel */
+.menu-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #d94135;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: color 0.3s;
+}
+
+.menu-close:hover {
+    color: #b53027;
+}
+
+/* Links do menu */
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.menu-links a:hover {
+    color: #d94135;
+    background-color: #f5f5f5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: block;
+    }
+}

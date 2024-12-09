@@ -1,18 +1,57 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/header_base.css' %}">
-<header class="header">
-    <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Logo" class="logo"></a>
-    <nav class="nav">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'produtos' %}">Produtos</a>
-        <a href="{% url 'contact' %}">Contato</a>
-        <a href="{% url 'about_us' %}">Sobre Nós</a>
-        {% if cliente %}
-        <a href="{% url 'profile' %}">Olá, {{ user_name }}</a>
-        {% else %}
-        <a href="{% url 'login' %}">login</a>
-        {% endif %}
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<script src="{% static 'js/header.js' %}"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header_b.css' %}">
+    <title>Header Completo</title>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Logo com acessibilidade -->
+        <a href="{% url 'home' %}" class="logo" aria-label="Voltar para a página inicial">
+            <img src="{% static 'img/logo.png' %}" alt="Logo">
+        </a>
+
+        <!-- Menu de navegação desktop -->
+        <nav class="desktop-menu">
+            <ul class="menu-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'produtos' %}">Produtos</a></li>
+                <li><a href="{% url 'contact' %}">Contato</a></li>
+                <li><a href="{% url 'about_us' %}">Sobre Nós</a></li>
+                {% if cliente %}
+                <li><a href="{% url 'profile' %}">Olá, {{ user_name }}</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+        <!-- Botão toggle para menu em mobile -->
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </header>
+
+    <!-- Menu móvel -->
+    <div class="mobile-menu">
+        <button class="menu-close" aria-label="Fechar menu">×</button>
+        <ul class="menu-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'produtos' %}">Produtos</a></li>
+            <li><a href="{% url 'contact' %}">Contato</a></li>
+            <li><a href="{% url 'about_us' %}">Sobre Nós</a></li>
+            {% if cliente %}
+            <li><a href="{% url 'profile' %}">Olá, {{ user_name }}</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <script src="{% static 'js/header.js' %}"></script>
+</body>
+
+</html>
