@@ -1,7 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.views import View
 
+
+class IndexView(View):
+    def get(self, request):
+        redirect_url = reverse_lazy('home')
+        return redirect(redirect_url)
 
 class HomeView(View):
     def get(self, request):
