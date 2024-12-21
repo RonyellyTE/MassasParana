@@ -1,11 +1,11 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-  {%include 'base.html'%}
+{% load static %}
+<head>
   <title>Perfil do Usuário</title>
   <link rel="stylesheet" href="{% static 'css/pages/profile.css' %}">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
+</head>
 <body>
   <div class="container">
     {% include 'header.html' %}
@@ -31,15 +31,15 @@
           {% csrf_token %}
           <label>
             Nome:
-            <input type="text" name="nome" value="{{ cliente.nome }}" required>
+            <input type="text" name="nome" value="{{ cliente.nome }}" required aria-label="Nome">
           </label>
           <label>
             Email:
-            <input type="email" name="email" value="{{ cliente.email }}" required>
+            <input type="email" name="email" value="{{ cliente.email }}" required aria-label="Email">
           </label>
           <label>
             Gênero:
-            <select name="genero">
+            <select name="genero" aria-label="Gênero">
               <option value="Masculino" {% if cliente.genero == "Masculino" %}selected{% endif %}>Masculino</option>
               <option value="Feminino" {% if cliente.genero == "Feminino" %}selected{% endif %}>Feminino</option>
               <option value="Outro" {% if cliente.genero == "Outro" %}selected{% endif %}>Outro</option>
@@ -47,15 +47,15 @@
           </label>
           <label>
             CPF:
-            <input type="text" name="cpf" value="{{ cliente.cpf }}">
+            <input type="text" name="cpf" value="{{ cliente.cpf }}" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" aria-label="CPF" title="Formato: 000.000.000-00">
           </label>
           <label>
             Data de nascimento:
-            <input type="date" name="data_nascimento" value="{{ cliente.data_nascimento|date:'Y-m-d' }}">
+            <input type="date" name="data_nascimento" value="{{ cliente.data_nascimento|date:'Y-m-d' }}" aria-label="Data de nascimento">
           </label>
           <label>
             Telefone:
-            <input type="tel" name="telefone" value="{{ cliente.telefone }}">
+            <input type="tel" name="telefone" value="{{ cliente.telefone }}" pattern="\(\d{2}\) \d{4,5}-\d{4}" aria-label="Telefone" title="Formato: (XX) XXXXX-XXXX">
           </label>
           <button type="submit">Salvar</button>
         </form>

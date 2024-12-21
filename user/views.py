@@ -27,75 +27,62 @@ class IndexView(View):
 class LoginView(FormView):
     template_name = 'login.html'
     form_class = LoginForm
-    success_url = reverse_lazy('profile')  # URL do perfil do cliente
+    success_url = reverse_lazy('profile')
 
     def form_valid(self, form):
         email = form.cleaned_data['email']
         senha = form.cleaned_data['senha']
 
         try:
-            # Busca o cliente pelo email
             cliente = Cliente.objects.get(email=email)
-
-            # Verifica a senha
             if cliente.check_password(senha):
-                # Cria a sessão do cliente
                 self.request.session['cliente_id'] = cliente.id
                 self.request.session['user_name'] = cliente.nome
                 self.request.session['user_email'] = cliente.email
-
-                # Redireciona para o perfil
+                logger.info("Cliente logged in: %s", email)
                 return redirect(self.success_url)
             else:
+                logger.warning("Invalid password for email: %s", email)
                 messages.error(self.request, "Email ou senha incorretos.")
-                return self.form_invalid(form)
         except Cliente.DoesNotExist:
+            logger.warning("Login attempted for non-existent email: %s", email)
             messages.error(self.request, "Usuário não encontrado.")
-            return self.form_invalid(form)
+
+        return self.form_invalid(form)
 
     def form_invalid(self, form):
-        messages.error(self.request, "Erro no login. Verifique as informações e tente novamente.")
+        messages.error(self.request, "Erro no login. Verifique as informações.")
         return super().form_invalid(form)
-
 
 
 class RegisterView(FormView):
     template_name = 'cadastro.html'
     form_class = RegisterForm
-    success_url = reverse_lazy('login')  # Redireciona para o login após o registro
+    success_url = reverse_lazy('login')
 
     def form_valid(self, form):
         nome = form.cleaned_data['nome']
         email = form.cleaned_data['email']
         senha = form.cleaned_data['senha']
 
-        # Verifica se o email já está registrado
-        if get_user_model().objects.filter(email=email).exists():
-            messages.error(self.request, "Este email já está em uso. Tente outro.")
-            return self.form_invalid(form)
-
         try:
-            # Cria o novo usuário
             usuario = Cliente.objects.create(
                 nome=nome,
-                email=email,
-                senha=senha,  # Lembre-se de criptografar a senha, se necessário
+                email=email
             )
-            usuario.set_password(senha)  # Criptografa a senha
+            usuario.set_password(senha)  # Hash and save the password securely
             usuario.save()
-            
             messages.success(self.request, "Cadastro realizado com sucesso! Agora você pode fazer login.")
             return super().form_valid(form)
 
-        except IntegrityError as e:
-            # Em caso de erro de integridade (ex: email duplicado)
-            messages.error(self.request, "Erro ao tentar realizar o cadastro. Tente novamente mais tarde.")
+        except IntegrityError:
+            logger.error("IntegrityError: Email already in use: %s", email)
+            messages.error(self.request, "Erro ao realizar o cadastro. Tente novamente mais tarde.")
             return self.form_invalid(form)
 
     def form_invalid(self, form):
-        # Exibe os erros no console
-        print(f"Formulário inválido com erros: {form.errors}")
-        logger.error(f"Formulário inválido no cadastro: {form.errors}")
+        logger.error(f"Register form invalid: {form.errors}")
+        messages.error(self.request, "Erro no formulário. Verifique as informações.")
         return super().form_invalid(form)
 
 
@@ -142,8 +129,8 @@ class ProductsView(View):
 class EditarPerfilView(LoginRequiredMixin, UpdateView):
     model = Cliente
     form_class = ClienteEditForm
-    template_name = "editar_cliente.html"  # Template para a edição
-    success_url = reverse_lazy("perfil_usuario")  # Redirecionamento após sucesso
+    template_name = "profile.html"  # Mesma página onde será exibido o formulário
+    success_url = reverse_lazy("profile")  # Redirecionamento corrigido
 
     def get_object(self, queryset=None):
         """
@@ -170,4 +157,3 @@ class EditarPerfilView(LoginRequiredMixin, UpdateView):
         """
         messages.error(self.request, "Erro ao atualizar o perfil. Verifique os dados e tente novamente.")
         return super().form_invalid(form)
-

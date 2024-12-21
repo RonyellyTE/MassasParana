@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.hashers import make_password, check_password
 from django.core.validators import RegexValidator
-
+from django.core.exceptions import ValidationError
 
 class Cliente(models.Model):
     nome = models.CharField(max_length=100)
@@ -15,7 +15,7 @@ class Cliente(models.Model):
         default='Não informado'
     )
     cpf = models.CharField(
-        max_length=14,  # 999.999.999-99
+        max_length=14, 
         validators=[RegexValidator(r'^\d{3}\.\d{3}\.\d{3}-\d{2}$')],
         blank=True,
         null=True
@@ -25,12 +25,19 @@ class Cliente(models.Model):
         return self.nome
 
     def set_password(self, raw_password):
-        """Define e armazena a senha hash."""
+        """Hashes and sets the password."""
         self.senha = make_password(raw_password)
 
     def check_password(self, raw_password):
-        """Verifica se a senha está correta."""
+        """Validates the password."""
         return check_password(raw_password, self.senha)
+
+    def save(self, *args, **kwargs):
+        """Override save to ensure password is hashed."""
+        if not self.pk and self.senha:  # Only hash on creation
+            self.set_password(self.senha)
+        super().save(*args, **kwargs)
+
 
 class Funcionario(models.Model):
     nome = models.CharField(max_length=100)
