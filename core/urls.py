@@ -18,6 +18,8 @@ Descrição: Define o mapeamento de URLs para views. É aqui que você configura
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 
@@ -27,4 +29,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('products/', include('products.urls')),
     path('user/', include('user.urls'))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

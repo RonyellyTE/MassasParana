@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massas Paraná</title>
+    <link rel="stylesheet" href="{% static 'css/products_home_.css' %}">
+</head>
+<body>
+{% include "header.html" %}
+    <!-- Banner -->
+    <section class="banner fade-in">
+        <h1>Bem-vindo à Massas Paraná</h1>
+        <p>Produzindo as melhores massas com amor e tradição.</p>
+    </section>
+
+    <!-- Categorias -->
+    <section id="categorias" class="categories fade-in">
+        <h2>Categorias</h2>
+        <ul>
+            {% for categoria in categorias %}
+            <li>
+                <a href="{% url 'produtos_por_categoria' categoria.id %}">
+                    {{ categoria.nome }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Imagens destacadas baseadas nas categorias -->
+    <section id="featured-images" class="fade-in">
+        <div class="featured-images-container">
+        {% for categoria in categorias %}
+            <div class="featured-image fade-in">
+                {% if categoria.imagem %}
+                    <img src="{{ categoria.imagem.url }}" alt="{{ categoria.nome }}">
+                {% else %}
+                    <img src="{% static 'images/default-category.jpg' %}" alt="Categoria padrão">
+                {% endif %}
+                <p>{{ categoria.nome }}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="products fade-in">
+        <h2>Produtos{% if categoria_selecionada %} - {{ categoria_selecionada.nome }}{% endif %}</h2>
+        <div class="product-grid">
+            {% for produto in produtos %}
+            <div class="product {% if categoria_selecionada and produto.categoria == categoria_selecionada %}highlight{% endif %} fade-in">
+                <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
+                <h4>{{ produto.nome }}</h4>
+                <p>R$ {{ produto.preco }}</p>
+                <div class="actions">
+                    <button>Adicionar ao Carrinho</button>
+                    <button>Encomendar Agora</button>
+                </div>
+            </div>
+            {% empty %}
+            <p>Nenhum produto disponível nesta categoria.</p>
+            {% endfor %}
+        </div>
+    </section>      
+
+    <!-- Rodapé -->
+    <footer class="fade-in">
+        <p>Produção diária e fresca! Aceitamos apenas pedidos para retirada.</p>
+    </footer>
+    <script src="{% static 'js/products_home.js' %}"></script>
+</body>
+</html>
