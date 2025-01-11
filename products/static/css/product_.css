@@ -1,0 +1,240 @@
+/* Paleta de cores e fontes */
+:root {
+  --primary-color: #d94135;
+  --secondary-color: #fff7f3;
+  --text-color: #333;
+  --button-hover: #b63529;
+  --font-family: 'Readex Pro', sans-serif;
+  --border-radius: 8px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Estrutura Principal */
+.product-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+/* Imagem do Produto */
+.product-image-section {
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Informações do Produto */
+.product-info-section {
+  flex: 1 1 400px;
+  max-width: 600px;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.product-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  text-align: center;
+  color: gold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.price-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.payment {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Controle de Quantidade */
+.quantity-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quantity-button {
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantity-button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.1);
+}
+
+.quantity-display {
+  width: 60px;
+  height: 45px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  background-color: white;
+  color: var(--text-color);
+}
+
+/* Botões de Compra */
+.button-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.buy-button,
+.order-now-button {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.buy-button:hover,
+.order-now-button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.1);
+}
+
+/* Descrição e Detalhes */
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.description,
+.allergens,
+.ingredients {
+  flex: 1 1 300px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+p,
+ul {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image-section,
+  .product-info-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .button-section {
+    width: 100%;
+  }
+
+  .buy-button,
+  .order-now-button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-price {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}

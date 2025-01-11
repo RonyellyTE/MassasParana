@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ produto.nome }}</title>
+  <link rel="stylesheet" href="{% static 'css/product_.css' %}">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const decrementButton = document.querySelector('.quantity-button.decrement');
+      const incrementButton = document.querySelector('.quantity-button.increment');
+      const quantityDisplay = document.querySelector('.quantity-display');
+
+      let quantity = 1; // Valor inicial
+
+      // Função para atualizar o display
+      function updateQuantityDisplay() {
+        quantityDisplay.textContent = quantity;
+      }
+
+      // Evento de decremento
+      decrementButton.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          updateQuantityDisplay();
+        }
+      });
+
+      // Evento de incremento
+      incrementButton.addEventListener('click', () => {
+        quantity++;
+        updateQuantityDisplay();
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  {% include 'header.html' %}
+  <main class="product-page">
+    <!-- Container Principal -->
+    <div class="main-container">
+      <!-- Imagem do Produto -->
+      <section class="product-image-section">
+        <img src="{{ produto.imagem.url }}" 
+             alt="{{ produto.nome }}" 
+             class="product-image">
+      </section>
+
+      <!-- Informações do Produto -->
+      <section class="product-info-section">
+        <!-- Nome do Produto -->
+        <h1 class="product-title">{{ produto.nome }}</h1>
+        
+        <!-- Avaliação -->
+        <div class="rating">
+          ★★★★★
+        </div>
+
+        <!-- Preço -->
+        <div class="price-container">
+          <span class="product-price">R$ {{ produto.preco }}</span>
+        </div>
+
+        <!-- Categoria -->
+        <div class="category">
+          <span>Categoria: {{ produto.categoria.nome }}</span>
+          <br>
+          <span>Disponível em Estoque: {{ produto.quantidade }}</span>
+        </div>
+
+        <!-- Formas de Pagamento -->
+        <div class="payment">
+          <span>Formas de pagamento</span>
+        </div>
+
+        <!-- Controle de Quantidade -->
+        <form action="{% url 'adicionar_ao_carrinho' produto.id %}" method="POST" class="add-to-cart-form">
+          {% csrf_token %}
+          <div class="quantity-section">
+            <button type="button" class="quantity-button decrement">-</button>
+            <input type="text" name="quantidade" value="1" class="quantity-display" readonly>
+            <button type="button" class="quantity-button increment">+</button>
+          </div>
+          <button type="submit" class="buy-button">Adicionar ao Carrinho!</button>
+        </form>
+    <!-- Descrição e Detalhes -->
+    <section class="product-details">
+      <!-- Descrição -->
+      <div class="description">
+        <h2>Descrição</h2>
+        <p>{{ produto.descricao }}</p>
+      </div>
+
+      <!-- Alérgenos -->
+      <div class="allergens">
+        <h2>Componentes para Alérgenos</h2>
+        <ul>
+          {% for alergeno in produto.get_alergenicos_list %}
+            <li>{{ alergeno }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Ingredientes -->
+      <div class="ingredients">
+        <h2>Ingredientes</h2>
+        <ul>
+          {% for ingrediente in produto.get_ingredientes_list %}
+            <li>{{ ingrediente }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

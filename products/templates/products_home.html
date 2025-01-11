@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massas Paraná</title>
-    <link rel="stylesheet" href="{% static 'css/products_home_.css' %}">
+    <link rel="stylesheet" href="{% static 'css/products_home.css' %}">
 </head>
 <body>
 {% include "header.html" %}
@@ -51,12 +51,17 @@
         <div class="product-grid">
             {% for produto in produtos %}
             <div class="product {% if categoria_selecionada and produto.categoria == categoria_selecionada %}highlight{% endif %} fade-in">
-                <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
-                <h4>{{ produto.nome }}</h4>
+                <!-- Link ao redor do produto -->
+                <a href="{% url 'produto_detalhes' produto.id %}">
+                    <div class="img-container">
+                        <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
+                    </div>
+                    <h4>{{ produto.nome }}</h4>
+                </a>
                 <p>R$ {{ produto.preco }}</p>
                 <div class="actions">
-                    <button>Adicionar ao Carrinho</button>
-                    <button>Encomendar Agora</button>
+                    <a href="{% url 'aumentar_quantidade' produto.id %}" class="btn btn-primary">Adicionar ao Carrinho</a>
+                    <a>Encomendar Agora</a>
                 </div>
             </div>
             {% empty %}

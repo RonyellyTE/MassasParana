@@ -23,6 +23,7 @@
                 <li><a href="{% url 'products' %}">Produtos</a></li>
                 <li><a href="{% url 'contact' %}">Contato</a></li>
                 <li><a href="{% url 'about_us' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'shopping_cart_details' %}">Carrinho</a></li>
                 {% if cliente %}
                 <li><a href="{% url 'profile' %}">Olá, {{ user_name }}</a></li>
                 {% else %}
@@ -43,6 +44,7 @@
             <li><a href="{% url 'products' %}">Produtos</a></li>
             <li><a href="{% url 'contact' %}">Contato</a></li>
             <li><a href="{% url 'about_us' %}">Sobre Nós</a></li>
+            <li><a href="{% url 'shopping_cart_details' %}">Carrinho</a></li>
             {% if cliente %}
             <li><a href="{% url 'profile' %}">Olá, {{ user_name }}</a></li>
             {% else %}
