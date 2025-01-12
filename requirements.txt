@@ -1,6 +1,13 @@
 asgiref==3.8.1
+certifi==2024.12.14
+charset-normalizer==3.4.1
 Django==5.1.2
+idna==3.10
+mercadopago==2.2.3
+pillow==11.1.0
+psycopg2-binary==2.9.10
+requests==2.32.3
 setuptools==75.1.0
 sqlparse==0.5.1
+urllib3==2.3.0
 wheel==0.44.0
-psycopg2-binary>=2.9.6,<2.10

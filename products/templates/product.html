@@ -6,34 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ produto.nome }}</title>
   <link rel="stylesheet" href="{% static 'css/product_.css' %}">
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const decrementButton = document.querySelector('.quantity-button.decrement');
-      const incrementButton = document.querySelector('.quantity-button.increment');
-      const quantityDisplay = document.querySelector('.quantity-display');
-
-      let quantity = 1; // Valor inicial
-
-      // Função para atualizar o display
-      function updateQuantityDisplay() {
-        quantityDisplay.textContent = quantity;
-      }
-
-      // Evento de decremento
-      decrementButton.addEventListener('click', () => {
-        if (quantity > 1) {
-          quantity--;
-          updateQuantityDisplay();
-        }
-      });
-
-      // Evento de incremento
-      incrementButton.addEventListener('click', () => {
-        quantity++;
-        updateQuantityDisplay();
-      });
-    });
-  </script>
 </head>
 <body>
   <!-- Header -->
@@ -114,5 +86,31 @@
       </div>
     </section>
   </main>
+  <script src="{% static 'js/products.js' %}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Seletores dos botões e do campo de quantidade
+      const decrementButton = document.querySelector(".quantity-button.decrement");
+      const incrementButton = document.querySelector(".quantity-button.increment");
+      const quantityDisplay = document.querySelector(".quantity-display");
+      const maxQuantity = {{ produto.quantidade|default:0 }}; // Máximo estoque disponível
+  
+      // Decrementar quantidade
+      decrementButton.addEventListener("click", function () {
+        let currentQuantity = parseInt(quantityDisplay.value, 10) || 1; // Valor atual ou padrão 1
+        if (currentQuantity > 1) {
+          quantityDisplay.value = currentQuantity - 1; // Reduz valor
+        }
+      });
+  
+      // Incrementar quantidade
+      incrementButton.addEventListener("click", function () {
+        let currentQuantity = parseInt(quantityDisplay.value, 10) || 1; // Valor atual ou padrão 1
+        if (currentQuantity < maxQuantity) {
+          quantityDisplay.value = currentQuantity + 1; // Aumenta valor
+        }
+      });
+    });
+  </script>  
 </body>
 </html>
