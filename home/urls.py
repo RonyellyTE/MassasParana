@@ -19,7 +19,7 @@ Descrição: Define o mapeamento de URLs para views. É aqui que você configura
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
-from .views import HomeView, contact, AboutUsView, IndexView
+from .views import HomeView, AboutUsView, IndexView, ContactView
 
 
 
@@ -28,5 +28,5 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('home/', HomeView.as_view(), name='home'),
     path('sobre_nos/', AboutUsView.as_view(), name='about_us'),
-    path('contato/', contact, name='contact'),
+    path('contato/', ContactView.as_view(), name='contact'),
 ]
