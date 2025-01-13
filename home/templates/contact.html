@@ -4,58 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato</title>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500&display=swap"
-  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500&display=swap" />
   <link rel="stylesheet" href="css/pages/contact.css" />
 </head>
 <body>
   <div class="main-container">
-    <header class="header">
-      <a href="home.html" class="logo">
-        <img src="./assets/images/logo.png" alt="Logo Padaria Massas Paraná" />
-      </a>
-      <nav class="menu">
-        <a href="home.html" class="menu-item">Home</a>
-        <a href="produtos.html" class="menu-item">Produtos</a>
-        <a href="contato.html" class="menu-item active">Contato</a>
-        <a href="sobre-nos.html" class="menu-item">Sobre Nós</a>
-        <button class="entrar">Entrar</button>
-      </nav>
+    {% include 'header.html' %}
+    <!-- Cabeçalho -->
+    <header class="banner">
+      <img src="img/bolos-doces.png" alt="Bolos, doces e salgados" />
     </header>
 
+    <!-- Conteúdo Principal -->
     <main>
-      <section class="intro">
-        <h1 class="section-title">O que podemos fazer por você?</h1>
-        <p class="section-description">
-          Tem dúvidas ou quer fazer um pedido? Estamos à disposição para ajudar!
-          Use o formulário de contato, ligue ou visite nossa loja, e responderemos
-          o mais rápido possível.
-        </p>
-      </section>
+      <!-- Seção: Serviços -->
+      <section id="servicos" class="servicos">
+        <div class="container">
+          <h1>O que podemos fazer por você?</h1>
+          <div class="servicos-container">
+            <!-- Primeiro bloco de serviço -->
+            <article class="texto">
+              <p>
+                Tem dúvidas ou quer fazer um pedido? Estamos à disposição para ajudar! Use o formulário de contato, ligue ou visite nossa loja, e responderemos o mais rápido possível.
+              </p>
+              <button onclick="location.href='#contato'" class="btn">Entre em Contato</button>
+            </article>
 
-      <section class="location">
-        <h2 class="section-subtitle">Onde Estamos?</h2>
-        <div class="map-placeholder">
-          <img src="./assets/images/map-placeholder.png" alt="Mapa de localização" />
+            <!-- Segundo bloco de serviço -->
+            <article class="texto">
+              <p>
+                Oferecemos bolos, doces e salgados personalizados para festas e eventos, adaptados ao tema e necessidades do seu evento. Entre em contato para discutirmos suas ideias e criar algo único e inesquecível para sua celebração.
+              </p>
+              <button onclick="location.href='#encomenda'" class="btn">Faça sua Encomenda</button>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="services">
-        <p class="section-description">
-          Oferecemos bolos, doces e salgados personalizados para festas e eventos,
-          adaptados ao tema e necessidades do seu evento. Entre em contato para
-          discutirmos suas ideias e criar algo único e inesquecível para sua
-          celebração.
-        </p>
-      </section>
-
-      <section class="actions">
-        <button class="contact-button">Entre em Contato</button>
-        <button class="order-button">Faça sua Encomenda</button>
+      <!-- Seção: Localização -->
+      <section id="localizacao" class="onde-estamos">
+        <div class="container">
+          <h2>Onde Estamos?</h2>
+          <div id="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4749.978626630962!2d-37.96054152424023!3d-5.782785657073798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bae267e2b0e839%3A0xa9b802da21063ab8!2sMASSAS%20PARANA!5e1!3m2!1spt-BR!2sbr!4v1736776168040!5m2!1spt-BR!2sbr"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
       </section>
     </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <div class="container">
+        <p>&copy; 2025 Padaria e Confeitaria. Todos os direitos reservados.</p>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
