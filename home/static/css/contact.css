@@ -1,0 +1,107 @@
+body {
+  font-family: 'Readex Pro', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Seção: Serviços */
+.servicos {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff4f2;
+}
+
+.servicos h1 {
+  font-size: 2.5rem;
+  color: #d43d3d;
+  margin-bottom: 2rem;
+}
+
+.servicos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.servicos-container .texto {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.servicos-container .texto:hover {
+  transform: translateY(-5px);
+}
+
+.servicos-container .texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.servicos-container .texto button {
+  padding: 0.75rem 1.5rem;
+  background-color: #d43d3d;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.servicos-container .texto button:hover {
+  background-color: white;
+  color: #d43d3d;
+  border: 2px solid #d43d3d;
+}
+
+/* Seção: Onde Estamos */
+.onde-estamos {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.onde-estamos h2 {
+  font-size: 2rem;
+  color: #d43d3d;
+  margin-bottom: 2rem;
+}
+
+#mapa iframe {
+  width: 90%;
+  max-width: 900px;
+  height: 450px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 0.9rem;
+}
