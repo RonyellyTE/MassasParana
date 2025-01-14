@@ -38,6 +38,7 @@ def shopping_cart_details(request):
     cart, _ = Carrinho.objects.get_or_create(user=request.user)
     return render(request, 'shopping_cart_deails_.html', {'carrinho': cart})
 
+
 @login_required
 def diminuir_quantidade(request, produto_id):
     carrinho = get_object_or_404(Carrinho, user=request.user)

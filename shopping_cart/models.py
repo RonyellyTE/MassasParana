@@ -3,10 +3,17 @@
 from django.db import models
 from decimal import Decimal
 from django.contrib.auth.models import User
-from products.models import Produto  # Importa o modelo de Produto
+from products.models import Produto 
+from django.conf import settings # Importa o modelo de Produto
 
 class Carrinho(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='carrinho', null=True, blank=True)
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,  # Usa o modelo de usuário personalizado
+        on_delete=models.CASCADE,
+        related_name='carrinho',
+        null=True,
+        blank=True
+    )
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Data de Criação")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Última Atualização")
 

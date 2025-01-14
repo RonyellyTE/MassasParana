@@ -1,107 +1,142 @@
-body {
-  font-family: 'Readex Pro', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #333;
+:root {
+  --primary-color: #d94135; /* Cor principal */
+  --secondary-color: #fff7f3; /* Fundo claro */
+  --text-color: #333; /* Cor do texto */
+  --hero-bg: linear-gradient(to right, #d94135, #b63529); /* Fundo do Hero */
+  --qualidade-bg: #f4f4f4; /* Fundo da seção "Qualidade" */
+  --experiencia-bg: #ffffff; /* Fundo da seção "Experiência" */
+  --junte-se-bg: #fbeae6; /* Fundo da seção "Junte-se" */
+  --font-family: 'Readex Pro', sans-serif;
 }
 
-header img {
-  display: block;
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+/* Texto Geral */
+p {
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.main-container {
+  width: 100%;
+}
+
+/* Cabeçalho */
+header.banner img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
-/* Seção: Serviços */
+/* Seção Serviços */
 .servicos {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #fff4f2;
+  background-color: var(--secondary-color);
+  padding: 8rem 2rem;
 }
 
 .servicos h1 {
   font-size: 2.5rem;
-  color: #d43d3d;
+  font-weight: 600;
   margin-bottom: 2rem;
 }
 
 .servicos-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 2rem;
 }
 
-.servicos-container .texto {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.texto {
+  flex: 1;
+  text-align: left;
 }
 
-.servicos-container .texto:hover {
-  transform: translateY(-5px);
-}
-
-.servicos-container .texto p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
+.texto p {
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
 
-.servicos-container .texto button {
-  padding: 0.75rem 1.5rem;
-  background-color: #d43d3d;
-  color: white;
-  border: 2px solid transparent;
-  border-radius: 30px;
-  font-size: 1rem;
+.texto button {
+  padding: 1rem 2.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease;
 }
 
-.servicos-container .texto button:hover {
-  background-color: white;
-  color: #d43d3d;
-  border: 2px solid #d43d3d;
+.texto button:hover {
+  background: #b63529;
 }
 
-/* Seção: Onde Estamos */
+/* Seção Localização */
 .onde-estamos {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  padding: 6rem 2rem;
+  background-color: var(--experiencia-bg);
 }
 
 .onde-estamos h2 {
-  font-size: 2rem;
-  color: #d43d3d;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #mapa iframe {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;
   height: 450px;
   border: 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Rodapé */
-.rodape {
-  background-color: #333;
+footer.rodape {
+  background-color: var(--primary-color);
   color: #fff;
+  padding: 2rem;
   text-align: center;
-  padding: 1rem 0;
 }
 
-.rodape p {
-  margin: 0;
-  font-size: 0.9rem;
+/* Responsividade */
+@media (max-width: 768px) {
+  .servicos-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto button {
+    width: 100%;
+  }
+
+  #mapa iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicos h1 {
+    font-size: 2rem;
+  }
+
+  .texto p {
+    font-size: 1.1rem;
+  }
+
+  .texto button {
+    font-size: 1rem;
+  }
+
+  #mapa iframe {
+    height: 250px;
+  }
 }

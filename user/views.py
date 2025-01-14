@@ -15,6 +15,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import UpdateView
 from django.shortcuts import render
 from .models import Cliente
+from django.contrib.auth import login
 
 logger = logging.getLogger(__name__)
 
@@ -36,6 +37,7 @@ class LoginView(FormView):
         try:
             cliente = Cliente.objects.get(email=email)
             if cliente.check_password(senha):
+                login(self.request, cliente)  # Faz o login do usuário
                 self.request.session['cliente_id'] = cliente.id
                 self.request.session['user_name'] = cliente.nome
                 self.request.session['user_email'] = cliente.email
@@ -49,6 +51,7 @@ class LoginView(FormView):
             messages.error(self.request, "Usuário não encontrado.")
 
         return self.form_invalid(form)
+
 
     def form_invalid(self, form):
         messages.error(self.request, "Erro no login. Verifique as informações.")
@@ -65,25 +68,20 @@ class RegisterView(FormView):
         email = form.cleaned_data['email']
         senha = form.cleaned_data['senha']
 
-        try:
-            usuario = Cliente.objects.create(
-                nome=nome,
-                email=email
-            )
-            usuario.set_password(senha)  # Hash and save the password securely
-            usuario.save()
-            messages.success(self.request, "Cadastro realizado com sucesso! Agora você pode fazer login.")
-            return super().form_valid(form)
+        # Criação do cliente usando o manager
+        Cliente.objects.create_user(
+            email=email,
+            password=senha,
+            nome=nome
+        )
 
-        except IntegrityError:
-            logger.error("IntegrityError: Email already in use: %s", email)
-            messages.error(self.request, "Erro ao realizar o cadastro. Tente novamente mais tarde.")
-            return self.form_invalid(form)
+        messages.success(self.request, "Cadastro realizado com sucesso! Agora você pode fazer login.")
+        return super().form_valid(form)
 
     def form_invalid(self, form):
-        logger.error(f"Register form invalid: {form.errors}")
         messages.error(self.request, "Erro no formulário. Verifique as informações.")
         return super().form_invalid(form)
+
 
 
 class PasswordResetView(View):
